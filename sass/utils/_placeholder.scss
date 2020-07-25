@@ -1,0 +1,32 @@
+%link-animation-placeholder{
+    &:hover,
+    &:focus-within,
+    &:active {
+        color: $header-blue;
+        transition: $main-transition;
+    }
+}
+
+%social-animation-placeholder{
+    &:hover,
+    &:focus-within,
+    &:active {
+        background-color: $header-blue;
+        color: $header-blue;
+        transition: $main-transition;
+    }
+}
+
+%icon-animation-placeholder{   
+    &:hover svg,
+    &:focus-within svg,
+    &:active svg {
+      fill: $button-text-color;
+      transition: $main-transition;
+    }
+}
+
+%social-icon__svg-size{
+    width: 20px;
+    height: 20px;
+}

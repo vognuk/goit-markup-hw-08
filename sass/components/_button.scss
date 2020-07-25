@@ -1,0 +1,62 @@
+.button-style {
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      center,
+      center
+    );
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    margin-top: 30px;
+    border-radius: 4px;
+    border: none;
+    background: $header-blue;
+
+    @include font(
+      Roboto, 
+      normal, 
+      bold, 
+      16px, 
+      30px, 
+      center, 
+      0.06em, 
+      $button-text-color, 
+      none
+    );
+  
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+  }
+
+.hero .button-style {
+  margin-bottom: 224px;
+}
+
+.portfolio-button {
+  display: block;
+
+  @include font(
+    Roboto,
+    normal,
+    500,
+    16px,
+    26px,
+    center,
+    0.03em,
+    $title-color,
+    none
+  );
+
+  border-radius: 4px;
+  border: none;
+
+  line-height: 38px;
+  padding-right: 22px;
+  padding-left: 22px;
+  margin-left: 8px;
+
+  background-color: $team-box-color;
+}

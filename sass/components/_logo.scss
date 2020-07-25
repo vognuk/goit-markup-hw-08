@@ -1,0 +1,54 @@
+.logo-container {
+    display: block;
+    margin-right: 85px;
+  
+    line-height: 80px;
+    white-space: nowrap;
+  }
+
+  .footer-logo-link {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+.logo-1-2 {
+    @include font(
+        Raleway, 
+        normal, 
+        bold, 
+        26px, 
+        31px, 
+        center, 
+        0.03em, 
+        $header-blue, 
+        none
+    );
+}
+
+.logo-2-2 {
+    @include font(
+        Raleway, 
+        normal, 
+        bold, 
+        26px, 
+        31px, 
+        center,
+        0.03em, 
+        $logo-color-2-2, 
+        none
+    );
+}
+
+.logo-2-3 {
+    @include font(
+        Raleway, 
+        normal, 
+        bold, 
+        26px, 
+        31px, 
+        center,
+        0.03em, 
+        $button-text-color, 
+        none
+    );
+}

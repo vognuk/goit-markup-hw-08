@@ -1,0 +1,55 @@
+/* 
+ * elenent with links of social webs
+ *
+ */
+
+.social-list {
+  @include flex(
+    flex,
+    row,
+    nowrap,
+    space-between,
+    center
+  );
+  
+  width: 206px;
+  height: 44px;
+  margin-bottom: 25px;
+
+  list-style: none;
+  
+  &:not(:last-child) {
+    margin-left: 10px;
+  }
+}
+
+/* svg */
+
+.team-icon {
+  @extend %social-icon__svg-size;
+
+  fill: $social-icon-color;
+  transition: $main-transition;
+}
+
+.footer-icon {
+  @extend %social-icon__svg-size;
+
+  fill: $button-text-color;
+  transition: $main-transition;
+}
+
+/* social webs animation */
+
+.social-shortcut {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 11px;
+  
+  border: none;
+  border-radius: 50%;
+
+  @extend %social-animation-placeholder;
+  @extend %icon-animation-placeholder;
+}

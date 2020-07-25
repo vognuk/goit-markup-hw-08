@@ -1,0 +1,40 @@
+  .container {
+    display: block;
+    
+    width: 1200px;
+    padding-top: $section-padding;
+    padding-right: 15px;
+    padding-bottom: $section-padding;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .container-header {
+    display: block;
+    margin-bottom: 50px;
+
+    @include font(
+      Roboto, 
+      normal, 
+      bold, 
+      36px, 
+      42px, 
+      center, 
+      0.03em, 
+      $title-color, 
+      none
+    );
+  }
+
+  .container-box {
+    @include flex(
+      flex,
+      row,
+      wrap,
+      space-between,
+      stretch
+    );
+
+    width: 100%;
+  }

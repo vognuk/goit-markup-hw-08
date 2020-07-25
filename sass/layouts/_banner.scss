@@ -1,0 +1,44 @@
+.hero {
+  @include flex(
+    flex, 
+    column, 
+    nowrap,
+    center, 
+    center
+    );
+
+    max-width: 1600px;
+    height: 600px;
+  
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $section-padding;
+  
+    background-image: linear-gradient(
+      $hero-ways-background,
+      $hero-ways-background
+      ),
+      url('../images/header.jpg');
+    background-color: $hero-ways-background;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .hero-title {
+    margin-top: 140px;
+    margin-bottom: 30px;
+  
+    @include font(
+      Roboto, 
+      normal, 
+      900, 
+      44px, 
+      60px, 
+      center, 
+      0.06em, 
+      $button-text-color, 
+      uppercase
+    );
+     
+    max-width: 695px;
+  }

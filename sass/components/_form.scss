@@ -1,0 +1,314 @@
+.modal-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 15px;
+  background-color: $button-text-color;
+  border: 1px solid $modal-close-color;
+}
+
+.form-close-icon {
+  width: 18px;
+  height: 18px;
+
+  fill: $logo-color-2-2;
+}
+  
+.form-header {
+  padding-top: 25px; /* 40-15 */
+  padding-bottom: 12px;
+
+  @include font(
+    Roboto, 
+    normal, 
+    bold, 
+    20px, 
+    23px, 
+    center, 
+    0.03em, 
+    $title-color, 
+    none
+  );
+}
+  
+.form-input {
+  width: 100%;
+  height: 40px;
+  background-color: $button-text-color;
+  padding-left: 42px;
+
+  border-color: $form-input-color;
+  border-width: 1px;
+  border-radius: 4px;
+}
+  
+.form-field {
+  position: relative;
+  left: 0;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-right: 40px;
+  margin-left: 40px;
+
+  border-radius: 4px;
+}
+  
+.form-label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 42px;
+  
+  @include font(
+    Roboto, 
+    normal, 
+    normal, 
+    14px, 
+    16px, 
+    left, 
+    0.01em, 
+    $subtitle-color, 
+    uppercase
+  );
+
+}
+  
+.form-field {
+  &:hover label,
+  &:hover input,
+  &:hover svg,
+  &:focus-within label,
+  &:focus-within input,
+  &:focus-within svg {
+    color: $header-blue;
+    border-color: $header-blue;
+    fill: $header-blue;
+  }
+}
+
+.form-input {
+  &:focus + .form-label,
+  &:not(:placeholder-shown) + .form-label {
+    transform: translateX(-25px) translateY(-40px);
+    transition: $main-transition; 
+  }
+}  
+  
+.form-customer-icon {
+  position: absolute;
+  left: 19px;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+  
+.license-agreement,
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+}
+  
+.hero-form-checkbox {
+  position: absolute;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hero-form-checkbox  ~ .hero-custom-checkbox:before {
+  content: '';
+
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  
+  border: 2px solid $title-color;
+  border-radius: 2px;
+  margin-right: 8px;
+  flex-shrink: 0;
+
+  transition: $main-transition;
+}
+
+  
+.hero-custom-checkbox {
+  @include font(
+    Roboto, 
+    normal, 
+    normal, 
+    14px, 
+    24px, 
+    center, 
+    0.03em, 
+    $subtitle-color, 
+    none
+  );
+}
+  
+.hero-form-checkbox:checked ~ .hero-custom-checkbox:before { 
+  background-color: $header-blue;
+  border-color: transparent;
+  background-image: url('../images/custom-checked-box.svg');
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+  
+.hero-comment {
+  margin-right: 40px;
+  margin-left: 40px;
+  padding-top: 14px;
+  padding-bottom: 20px;
+
+  @include font(
+    Roboto, 
+    normal, 
+    normal, 
+    14px, 
+    16px, 
+    center, 
+    0.01em, 
+    $subtitle-color, 
+    none
+  );
+}
+  
+.comment-field {
+  width: 448px;
+  padding: 12px;
+
+  border-color: $form-input-color;
+  border-radius: 4px;
+}
+
+.license-agreement {
+  margin-right: auto;
+  margin-left: auto;
+
+  & label {
+    margin-left: 50px;
+  }
+}
+
+.license-agreement-link {
+  display: inline-block;
+  margin-left: 5px;
+
+  text-decoration: underline;
+  color: $header-blue;
+
+  &:visited {
+    color: $header-blue;
+  }
+}
+
+.modal .button-style {
+  padding-right: 55px;
+  padding-left: 55px;
+
+  margin-top: 30px;
+  margin-left: 50%;
+  margin-bottom: 40px;
+
+  transform: translateX(-50%);
+}
+
+/* 
+ * Footer form
+ *
+ */
+
+
+.footer-subscribe {
+  margin-bottom: 20px;
+
+  @include font(
+    Roboto,
+    normal,
+    bold,
+    14px,
+    16px,
+    left,
+    0.03em,
+    $button-text-color,
+    uppercase
+  );
+}
+    
+.footer-email {
+  @include flex(
+    flex,
+    row,
+    nowrap,
+    center,
+    normal
+  );
+}
+    
+.footer-input {
+  width: calc(100% - 3*30px);
+  min-width: 50px;
+  height: 50px;
+  padding-left: 12px;
+  background-color: $footer-color;
+
+  @include font(
+    Roboto,
+    normal,
+    normal,
+    16px,
+    30px,
+    left,
+    0.03em,
+    $contact-color,
+    none
+  );
+    
+  border: 1px solid $input-border-color;
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border-radius: 4px;
+  background-color: $footer-color;
+  border-radius: 4px;
+}
+    
+.button-box {
+  margin-top: 0px;
+  margin-left: 12px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 28px;
+  padding-left: 29px;
+
+  border: none;
+}
+
+.button-box svg {
+  fill: $button-text-color;
+  margin-left: 10px;
+}
+
+.input-text {
+  @include font (
+    Roboto,
+    normal,
+    bold,
+    16px,
+    30px,
+    left,
+    0.06em,
+    $contact-color,
+    none
+  );
+}
+
+  

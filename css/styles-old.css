@@ -1,0 +1,75 @@
+
+
+
+
+
+/* Invisible headers sections*/
+
+
+
+
+
+
+
+
+
+
+ 
+
+/* 
+ * Hero block
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+/* 
+ * team section
+ *
+ */
+
+
+
+
+
+
+/* Form-style */
+
+
+/* .portfolio-list-item:nth-child(4n + 4) {
+  background-color: orange;
+} */
+
+/* 
+- Высоту для контента не использовать, у строчных их нет. */
+
+/*Кнопками при ховере добавить 
+cursor: pointer;
+нижнюю линию в хедер */
+
+/* scrol-bar style */
+
+body::-webkit-scrollbar {
+  width: 16px;
+  background-color: var(--team-box-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--subtitle-color);
+
+  transition: var(--main-transition);
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--header-blue);
+
+  transition: var(--main-transition);
+  }
