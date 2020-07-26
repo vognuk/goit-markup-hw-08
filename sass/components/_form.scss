@@ -139,7 +139,6 @@
   transition: $main-transition;
 }
 
-  
 .hero-custom-checkbox {
   @include font(
     Roboto, 
@@ -227,6 +226,32 @@
  *
  */
 
+.footer-form {
+  @include for-size(tablet-portrait-up) {
+   
+  }
+
+  @include for-size(tablet-landscape-up) {
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      normal
+    );
+  }
+
+  @include for-size(big-desktop-up) {
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      normal
+    );
+    width: calc(50% - 15px);
+  }
+}
 
 .footer-subscribe {
   margin-bottom: 20px;
@@ -245,22 +270,34 @@
 }
     
 .footer-email {
-  @include flex(
-    flex,
-    row,
-    nowrap,
-    center,
-    normal
-  );
+  @include for-size(tablet-portrait-up) {
+    // width: 100%;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      normal
+    );
+
+    width: 450px;
+  }
+
+  @include for-size(big-desktop-up) {
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      center,
+      normal
+    );
+  }
 }
     
 .footer-input {
-  width: calc(100% - 3*30px);
-  min-width: 50px;
-  height: 50px;
-  padding-left: 12px;
-  background-color: $footer-color;
-
   @include font(
     Roboto,
     normal,
@@ -278,37 +315,22 @@
   border-radius: 4px;
   background-color: $footer-color;
   border-radius: 4px;
+
+  @include for-size(tablet-portrait-up) {
+    width: 100%;
+  }
+
+  @include for-size(tablet-landscape-up) {
+   max-width: 450px;
+   padding: 15px;
+  }
+
+  @include for-size(big-desktop-up) {
+    width: calc(100% - 3 * 30px);
+    min-width: 50px;
+    height: 50px;
+    padding-left: 12px;
+    background-color: $footer-color;
+  }
 }
-    
-.button-box {
-  margin-top: 0px;
-  margin-left: 12px;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 28px;
-  padding-left: 29px;
-
-  border: none;
-}
-
-.button-box svg {
-  fill: $button-text-color;
-  margin-left: 10px;
-}
-
-.input-text {
-  @include font (
-    Roboto,
-    normal,
-    bold,
-    16px,
-    30px,
-    left,
-    0.06em,
-    $contact-color,
-    none
-  );
-}
-
-  
+ 

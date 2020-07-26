@@ -8,16 +8,6 @@ footer {
   background-color: $footer-color;
 }
 
-footer .container {
-  padding-bottom: 0px;
-}
-    
-.footer-axis {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-}
-
 /* address column */
     
 .footer-contacts {
@@ -27,7 +17,7 @@ footer .container {
     nowrap,
     left,
     inherit
-);
+  );
 
   width: calc((50% - 45px) / 2);
   margin-right: 70px;
@@ -35,12 +25,6 @@ footer .container {
     
 footer .contact-link {
   line-height: 19px;
-}
-
-.footer-form:last-child {
-  display: flex;
-  flex-direction: column;
-  width: calc(50% - 15px);
 }
 
 .contact-item:not(:last-child) {

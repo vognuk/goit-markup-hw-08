@@ -6,6 +6,7 @@
       center,
       center
     );
+
     padding-top: 10px;
     padding-right: 32px;
     padding-bottom: 10px;
@@ -29,6 +30,7 @@
   
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
+
   }
 
 .hero .button-style {
@@ -59,4 +61,37 @@
   margin-left: 8px;
 
   background-color: $team-box-color;
+}
+
+  // Footer subscribe
+   
+.button-box {
+  margin-top: 0px;
+  margin-left: 12px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 28px;
+  padding-left: 29px;
+
+  border: none;
+}
+
+.button-box svg {
+  fill: $button-text-color;
+  margin-left: 10px;
+}
+
+.input-text {
+  @include font (
+    Roboto,
+    normal,
+    bold,
+    16px,
+    30px,
+    left,
+    0.06em,
+    $contact-color,
+    none
+  );
 }

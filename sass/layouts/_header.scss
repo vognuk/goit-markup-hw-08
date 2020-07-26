@@ -2,43 +2,57 @@
  * Header
  *
  */
+ header {
+  @include for-size(tablet-portrait-up) {
+    display: none;
+  }
 
-header {
-    position: fixed;
-    z-index: 10;
+  @include for-size(tablet-landscape-up) {
+    display: none;
+  }
+
+  @include for-size(big-desktop-up) {
+    display: none;
+  }
+}
+
+
+// header {
+//     // position: fixed;
+//     z-index: 10;
   
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      center,
-      baseline,
-    );
+//     @include flex(
+//       flex,
+//       row,
+//       nowrap,
+//       center,
+//       baseline,
+//     );
 
-    width: 100%;
-    /* height: 80px; */
-    top: 0px;
+//     width: 100%;
+//     /* height: 80px; */
+//     top: 0px;
   
-    background-color: $button-text-color;
-    border: 1px solid #ECECEC;
-}
+//     background-color: $button-text-color;
+//     border: 1px solid #ECECEC;
+// }
 
-header .container {
-  @include flex(
-    flex, 
-    row, 
-    nowrap,
-    space-between, 
-    center
-  );
+// header .container {
+//   @include flex(
+//     flex, 
+//     row, 
+//     nowrap,
+//     space-between, 
+//     center
+//   );
 
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
+//   padding-top: 0px;
+//   padding-bottom: 0px;
+// }
 
- /* Main menu */
+//  /* Main menu */
 
-header > .container {
-  display: flex;
-}
+// header > .container {
+//   display: flex;
+// }
   

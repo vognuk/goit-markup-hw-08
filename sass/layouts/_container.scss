@@ -1,13 +1,27 @@
   .container {
-    display: block;
     
-    width: 1200px;
+    
     padding-top: $section-padding;
-    padding-right: 15px;
+    
     padding-bottom: $section-padding;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    
+
+    @include for-size(tablet-portrait-up) {
+      width: 100%;
+    }
+  
+    @include for-size(tablet-landscape-up) {
+     width: 100%;
+    }
+  
+    @include for-size(big-desktop-up) {
+      display: block;
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   .container-header {
@@ -28,13 +42,66 @@
   }
 
   .container-box {
-    @include flex(
-      flex,
-      row,
-      wrap,
-      space-between,
-      stretch
-    );
-
     width: 100%;
+
+    @include for-size(tablet-portrait-up) {
+      @include flex(
+        flex,
+        row,
+        wrap,
+        space-between,
+        stretch
+      );
+    }
+  
+    @include for-size(tablet-landscape-up) {
+      @include flex(
+        flex,
+        row,
+        wrap,
+        space-between,
+        stretch
+      );
+    }
+  
+    @include for-size(big-desktop-up) {
+      @include flex(
+        flex,
+        row,
+        nowrap,
+        space-between,
+        stretch
+      );
+    }
+  }
+
+  footer .container {
+    @include for-size(tablet-portrait-up) {
+      padding-bottom: 0px;
+    }
+  
+    @include for-size(tablet-landscape-up) {
+      @include flex(
+        flex,
+        row,
+        wrap,
+        space-between,
+        baseline
+      );
+  
+      // padding-right: 90px;
+      padding-bottom: 0px;
+      // padding-left: 75px;
+    }
+  
+    @include for-size(big-desktop-up) {
+      padding-bottom: 0px;
+      @include flex(
+        flex,
+        row,
+        nowrap,
+        center,
+        baseline
+      );
+    }
   }

@@ -22,14 +22,15 @@
     padding-top: 0px;
     padding-bottom: 0px;
    
-    width: 528px;
-    // height: 581px;
+    max-width: 528px;
+    width: 100%;
   
     box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.14),
     0px 3px 1px rgba(0, 0, 0, 0.12);
     
     background-color: $button-text-color; 
     border-radius: 4px;
+
   }
   
   .is-hidden {

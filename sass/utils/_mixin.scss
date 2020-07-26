@@ -17,3 +17,43 @@
     justify-content: $justify-content;
     align-items: $align-items;
 }
+
+// Responsive markup
+
+@mixin for-size($range) {
+    $phone-upper-boundary: 480px;
+    $tablet-portrait-upper-boundary: 768px;
+    $desktop-upper-boundary: 1200px;
+  
+    @if $range == phone-only {
+      @media (max-width: #{$phone-upper-boundary - 1}) { @content; }
+    } 
+    @else if $range == tablet-portrait-up {
+      @media (min-width: $phone-upper-boundary) { @content; }
+    } 
+    @else if $range == tablet-landscape-up {
+      @media (min-width: $tablet-portrait-upper-boundary) { @content; }
+    } 
+     @else if $range == big-desktop-up {
+      @media (min-width: $desktop-upper-boundary) { @content; }
+    }
+  }
+  
+  // usage
+//   .my-box {
+//     padding: 10px;
+    
+//     @include for-size(desktop-up) {
+//       padding: 20px;
+//     }
+//   }
+
+// @include for-size(desktop-upper-boundary) {
+//     @include flex(
+//       flex,
+//       row,
+//       nowrap,
+//       center,
+//       center
+//     );
+//   }
