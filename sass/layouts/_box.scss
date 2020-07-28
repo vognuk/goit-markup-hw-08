@@ -302,14 +302,14 @@
 .clients-item-box { 
   @include for-size(tablet-portrait-up) {
     // width: calc((100% - 30px * 1) / 2);
-    width: 225px;
+    max-width: 210px;
     height: 90px;
     margin: 15px;
   }
 
   @include for-size(tablet-landscape-up) {
     // width: calc((100% - 30px * 2) / 3);
-    width: 210px;
+    width: 225px;
     height: 90px;
     margin: 15px;
   }

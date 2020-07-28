@@ -253,21 +253,21 @@
   }
 }
 
-.footer-subscribe {
-  margin-bottom: 20px;
+// .footer-subscribe {
+//   margin-bottom: 20px;
 
-  @include font(
-    Roboto,
-    normal,
-    bold,
-    14px,
-    16px,
-    left,
-    0.03em,
-    $button-text-color,
-    uppercase
-  );
-}
+//   @include font(
+//     Roboto,
+//     normal,
+//     bold,
+//     14px,
+//     16px,
+//     left,
+//     0.03em,
+//     $button-text-color,
+//     uppercase
+//   );
+// }
     
 .footer-email {
   @include for-size(tablet-portrait-up) {

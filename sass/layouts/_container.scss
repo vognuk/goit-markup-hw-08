@@ -42,7 +42,7 @@
   }
 
   .container-box {
-    width: 100%;
+    // width: 100%;
 
     @include for-size(tablet-portrait-up) {
       @include flex(
@@ -52,6 +52,8 @@
         space-between,
         stretch
       );
+
+      margin-right: -30px;
     }
   
     @include for-size(tablet-landscape-up) {
@@ -90,7 +92,7 @@
       );
   
       // padding-right: 90px;
-      padding-bottom: 0px;
+     
       // padding-left: 75px;
     }
   
@@ -103,5 +105,7 @@
         center,
         baseline
       );
+
+      padding-bottom: 0px;
     }
   }
