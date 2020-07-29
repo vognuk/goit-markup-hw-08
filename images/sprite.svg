@@ -72,5 +72,8 @@
 <symbol id="icon-close-button" viewBox="0 0 32 32"><path d="M26.667 9.081l-1.97-1.97-7.808 7.808-7.808-7.808-1.97 1.97 7.808 7.808-7.808 7.808 1.97 1.97 7.808-7.808 7.808 7.808 1.97-1.97-7.808-7.808 7.808-7.808z"></path>
 </symbol>
 
+<symbol id="icon-pull-down-button" viewBox="0 0 40 40"><path d="M8 14.6667V12H32V14.6667H8ZM8 21.3333H32V18.6667H8V21.3333ZM8 28H32V25.3333H8V28Z"></path>
+</symbol>
+
 </defs>
 </svg>

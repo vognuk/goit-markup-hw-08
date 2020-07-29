@@ -1,45 +1,86 @@
 
 /* Main menu */
 
-// .header-menu {
-//   @include for-size(phone-only) {
-//     list-style-type: none;
-//   }
+.header-navigation {
+  @include for-size(phone-only) {
+    
+  }
 
-//   @include for-size(tablet-portrait-up) {
-//     list-style-type: none;
-//   }
+  @include for-size(tablet-portrait-up) {
+    position: absolute;
+    width: 480px;
 
-//   @include for-size(tablet-landscape-up) {
+    background-color: $button-text-color;
 
-//   }
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 1px rgba(0, 0, 0, 0.04);
 
-//   @include for-size(big-desktop-up) {
+    transform: translate(0px, 80px);
+  }
 
-//   }
-// }
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+
+  }
+}
 
 .main-menu-link {
-  position: relative;
-
-  display: block;
-
-  @include font(
-    Roboto,
-    normal,
-    500,
-    14px,
-    80px,
-    // 16px,
-    center,
-    0.02em,
-    $title-color,
-    none
-  );
-
   outline: none;
 
   @extend %link-animation-placeholder;
+
+  @include for-size(phone-only) {
+        
+  }
+
+  @include for-size(tablet-portrait-up) {
+   @include flex(
+     flex,
+     row,
+     nowrap,
+     center,
+     center
+    );
+  
+    @include font(
+      Roboto,
+      normal,
+      500,
+      18px,
+      21px,
+      center,
+      0.02em,
+      $title-color,
+      none
+    );
+  }
+
+  @include for-size(tablet-landscape-up) {
+       
+  }
+
+  @include for-size(big-desktop-up) {
+    position: relative;
+
+    display: block;
+  
+    @include font(
+      Roboto,
+      normal,
+      500,
+      14px,
+      80px,
+      // 16px,
+      center,
+      0.02em,
+      $title-color,
+      none
+    );
+  }
+
 }
 
 
@@ -49,13 +90,13 @@
   }
 
   @include for-size(tablet-portrait-up) {
-    display: flex;
+    // display: flex;
     // justify-content: flex-start;
 
-    & > li:not(:last-child) {
-      // display: block;
-      margin-right: 50px;
-    }
+    // & > li:not(:last-child) {
+    //   // display: block;
+    //   margin-right: 50px;
+    // }
   }
 
   @include for-size(tablet-landscape-up) {
@@ -79,7 +120,8 @@
   }
 
   @include for-size(tablet-portrait-up) {
-    
+    height: 21px;
+    fill: $subtitle-color;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -160,28 +202,29 @@
   }
 }
 
-.header-contacts {
-  @include for-size(phone-only) {
+// .header-contacts {
+//   @include for-size(phone-only) {
      
-  }
+//   }
 
-  @include for-size(tablet-portrait-up) {
-    display: block;
-  }
+//   @include for-size(tablet-portrait-up) {
+//     display: block;
 
-  @include for-size(tablet-landscape-up) {
-    display: block;
+//   }
+
+//   @include for-size(tablet-landscape-up) {
+//     display: block;
      
-  }
+//   }
 
-  @include for-size(big-desktop-up) {
-    display: flex;
+//   @include for-size(big-desktop-up) {
+//     display: flex;
 
-    & > li:not(:last-child) {
-      margin-right: 30px;
-    }  
-  }
-}
+//     & > li:not(:last-child) {
+//       margin-right: 30px;
+//     }  
+//   }
+// }
   
 .header-number {
   display: block;
@@ -191,7 +234,48 @@
 
   margin-top: auto;
   margin-bottom: auto;
+
+
   white-space: nowrap;
+
+  @include for-size(phone-only) {
+      
+  }
+
+  @include for-size(tablet-portrait-up) {
+    @include font(
+      Roboto,
+      normal,
+      medium,
+      18px,
+      21px,
+      center,
+      0.02em,
+      $subtitle-color,
+      none
+    );
+    // padding-right: 10px;
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    @include font(
+      Roboto,
+      normal,
+      medium,
+      14px,
+      16px,
+      center,
+      0.02em,
+      $subtitle-color,
+      none
+    );
+
+    // margin-right: 10px;
+  }
 }
 
 .current-page {

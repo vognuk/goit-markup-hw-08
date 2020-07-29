@@ -4,27 +4,98 @@
  */
 
 footer {
-  padding-bottom: 60px;
   background-color: $footer-color;
+
+  @include for-size(phone-only) {
+      
+  }
+
+  @include for-size(tablet-portrait-up) {
+    // width: 100%;
+    padding-bottom: 60px;
+
+    @include flex(
+      flex,
+      row,
+      wrap,
+      center,
+      center
+    );
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    padding-bottom: 60px;
+  }
 }
 
 /* address column */
     
 .footer-contacts {
-  @include flex(
-    flex,
-    column,
-    nowrap,
-    left,
-    inherit
-  );
+  @include for-size(phone-only) {
+      
+  }
 
-  width: calc((50% - 45px) / 2);
-  margin-right: 70px;
+  @include for-size(tablet-portrait-up) {
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      center
+    );
+
+    margin-top:  $phone--header-top;
+    margin-bottom:  $phone--header-top;
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      left,
+      inherit
+    );
+  
+    width: calc((50% - 45px) / 2);
+    margin-right: 70px;
+  }
 }
     
 footer .contact-link {
-  line-height: 19px;
+ 
+
+  @include for-size(phone-only) {
+    
+  }
+
+  @include for-size(tablet-portrait-up) {
+    line-height: 19px;
+
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      center,
+      center
+    );
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    line-height: 19px;
+  }
 }
 
 .contact-item:not(:last-child) {
@@ -50,5 +121,46 @@ footer .contact-link {
   background-color: $footer-social-bgr;
 }
     
-    /* --- Subscribe */
+/* --- Subscribe */
     
+.footer-subscribe {
+  @include for-size(phone-only) {
+      
+  }
+
+  @include for-size(tablet-portrait-up) {
+    margin-bottom: 20px;
+
+    @include font(
+      Roboto,
+      normal,
+      bold,
+      14px,
+      16px,
+      center,
+      0.03em,
+      $button-text-color,
+      uppercase
+    );
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    margin-bottom: 20px;
+
+    @include font(
+      Roboto,
+      normal,
+      bold,
+      14px,
+      16px,
+      left,
+      0.03em,
+      $button-text-color,
+      uppercase
+    );
+  }
+}

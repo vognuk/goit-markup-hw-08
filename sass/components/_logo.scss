@@ -1,9 +1,30 @@
 .logo-container {
-    display: block;
-    margin-right: 85px;
-  
-    line-height: 80px;
-    white-space: nowrap;
+
+
+    @include for-size(phone-only) {
+        
+    }
+
+    @include for-size(tablet-portrait-up) {
+        position: absolute;
+        line-height: 60px;
+        // top: 0;
+        // left: 0;
+
+        // transform: translate(50%, 80%);
+    }
+
+    @include for-size(tablet-landscape-up) {
+
+    }
+
+    @include for-size(big-desktop-up) {
+        display: block;
+        margin-right: 85px;
+      
+        line-height: 80px;
+        white-space: nowrap;
+    }
   }
 
   .footer-logo-link {

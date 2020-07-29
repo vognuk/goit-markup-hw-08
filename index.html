@@ -13,69 +13,90 @@
     />
   </head>
   <body>
-    <!--main menu container-->
+  <!--main menu container-->
 
-    <header>
-      <div class="container">
-        <div class="logo-container">
-          <a class="logo-link" href="./index.html">
-            <span class="logo-2-2"><span class="logo-1-2">Web</span> Studio</span>
-          </a>
-        </div>
-        <ul class="header-pages">
-          <li>
-            <a class="main-menu-link current-page" href="./index.html"
-              >Студия</a
-            >
-          </li>
-          <li>
-            <a
-              class="main-menu-link"
-              href="./portfolio.html"
-              >Портфолио</a
-            >
-          </li>
-          <li>
-            <a class="main-menu-link" href="">Контакты</a>
-          </li>
-        </ul>
-        <!-- Header contacts -->
-        <ul class="header-contacts">
-          <li>
-            <a class="contact-link" href="mailto:info@devstudio.com"
-              ><svg
-                class="header-icon"
-                width="10px"
-                height="15px"
-                preserveAspectRatio="xMaxYMax meet"
-              >
-                <use href="./images/sprite.svg#icon-contact-envelope"></use>
-              </svg>
-              <span class="header-number">info@devstudio.com</span></a
-            >
-          </li>
-          <li>
-            <a class="contact-link" href="tel:+380991111111"
-              ><svg
-                class="header-icon"
-                width="10px"
-                height="15px"
-                preserveAspectRatio="xMaxYMax meet"
-              >
-                <use href="./images/sprite.svg#icon-contact-smartphone"></use>
-              </svg>
-              <span class="header-number">+38 099 111 11 11</span>
+    <header>    
+        <div class="container">
+          <div class="logo-container">
+            <a class="logo-link" href="./index.html">
+              <span class="logo-2-2"><span class="logo-1-2">Web</span> Studio</span>
             </a>
-          </li>
-        </ul>
-      </div>
+          </div>
+          <nav class="header-navigation">
+            <ul class="header-pages">
+              <li>
+                <a class="main-menu-link current-page" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li>
+                <a
+                  class="main-menu-link"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li>
+                <a class="main-menu-link" href="">Контакты</a>
+              </li>
+            <!-- </ul> -->
+            <!-- Header contacts -->
+            <!-- <ul class="header-contacts"> -->
+              <li>
+                <a class="main-menu-link" href="mailto:info@devstudio.com"
+                  ><svg
+                    class="header-icon"
+                    width="32px"
+                    height="32px"
+                    preserveAspectRatio="xMaxYMax meet"
+                  >
+                    <use href="./images/sprite.svg#icon-contact-envelope"></use>
+                  </svg>
+                  <span class="header-number">info@devstudio.com</span></a
+                >
+              </li>
+              <li>
+                <a class="main-menu-link" href="tel:+380991111111"
+                  ><svg
+                    class="header-icon"
+                    width="32px"
+                    height="32px"
+                    preserveAspectRatio="xMaxYMax meet"
+                  >
+                    <use href="./images/sprite.svg#icon-contact-smartphone"></use>
+                  </svg>
+                  <span class="header-number">+38 099 111 11 11</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Pull-down mobile menu -->
+          <div class="pull-down-box">
+            <button type="button" class="button-pull-down-open" data-menu>
+              <svg class="pull-down-open-svg" width="32px" height="32px">
+                <use href="./images/sprite.svg#icon-pull-down-button"></use>
+              </svg>
+            </button>
+
+            <button type="button" class="button-pull-down-close" data-menu>
+              <svg class="pull-down-close-svg" width="40px" height="40px">
+                <use href="./images/sprite.svg#icon-close-button"></use>
+              </svg>
+            </button>
+  
+            <div class="pull-down-menu-close" is-open>
+
+            </div>
+          </div>   
+        </div>
+      
     </header>
 
-    <!--studio container-->
+  <!--studio container-->
 
     <main>
 
-      <!--logo container-->
+  <!--logo container-->
 
       <section class="hero">
       
@@ -536,9 +557,9 @@
           <address>
             <ul class="contacts-links">
               <li class="contact-item">
-                <pre class="address-post">
+                <p class="address-post">
                   г.Киев, пр-т Леси Украинки, 26
-                </pre>
+                </p>
               </li>
               <li class="contact-item">
                 <a
@@ -693,7 +714,7 @@
 
       </div>
        
-  </div>
+    </div>
     <!-- Modal window script-->
 
   </main>

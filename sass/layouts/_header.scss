@@ -18,13 +18,14 @@ header {
 
 
   @include for-size(phone-only) {
-    display: none;
+    // display: none;
   }
 
   @include for-size(tablet-portrait-up) {
-    display: none;
+    // display: none;
     // position: fixed;
     // z-index: 10;
+    height: 60px;
   
     // @include flex(
     //   flex,
@@ -34,11 +35,11 @@ header {
     //   baseline,
     // );
   
-    // width: 100%;
-    // top: 0px;
+    width: 100%;
+    top: 0px;
   
-    // background-color: $button-text-color;
-    // border: 1px solid #ECECEC;
+    background-color: $button-text-color;
+    border: 1px solid #ECECEC;
   }
 
   @include for-size(tablet-landscape-up) {

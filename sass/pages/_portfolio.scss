@@ -5,26 +5,61 @@
 
 /* menu */
 .menu-list {
-  @include flex(
-    flex,
-    row,
-    nowrap,
-    center,
-    flex-start
-  );
-  margin-bottom: 50px;
+  @include for-size(phone-only) {
+      
+  }
+
+  @include for-size(tablet-portrait-up) {
+    @include flex(
+      flex,
+      row,
+      wrap,
+      left,
+      flex-start
+    );
+    margin-bottom: 40px;
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      center,
+      flex-start
+    );
+    margin-bottom: 50px;
+}
 }
   
 /* - Portfolio cards---------------------------------- */
   
 .portfolio-list {
-  @include flex(
-    flex,
-    row,
-    wrap,
-    center,
-    flex-start
-  );
+  @include for-size(phone-only) {
+      
+  }
+
+  @include for-size(tablet-portrait-up) {
+    margin-bottom: 60px;
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    @include flex(
+      flex,
+      row,
+      wrap,
+      center,
+      flex-start
+    );
+  }
 }
 
 .portfolio-card {
@@ -32,17 +67,9 @@
 }
   
 .portfolio-item {
-  width: calc((100% - 30px * 2) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-
   border: 1px solid;
   border-color: $team-box-color;
   
-  &:nth-child(3n) {
-    margin-right: 0px;
-  }
-
   &:hover .jumping-text,
   &:focus-within .jumping-text,
   &:active .jumping-text { /* для IE<7 */
@@ -57,6 +84,30 @@
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
     transition: $main-transition;
+  }
+
+  @include for-size(phone-only) {
+      
+  }
+
+  @include for-size(tablet-portrait-up) {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    width: calc((100% - 30px * 2) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
   }
 }
 
