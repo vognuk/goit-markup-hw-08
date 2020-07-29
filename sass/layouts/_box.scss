@@ -17,18 +17,22 @@
 .principle-header {
   margin-bottom: 10px;
 
+  @include for-size(phone-only) {
+
+  }
+
   @include for-size(tablet-portrait-up) {
-  @include font(
-    Roboto, 
-    normal, 
-    bold, 
-    14px, 
-    16px, 
-    center, 
-    0.03em, 
-    $title-color,
-    uppercase
-  );
+    @include font(
+      Roboto, 
+      normal, 
+      bold, 
+      14px, 
+      16px, 
+      center, 
+      0.03em, 
+      $title-color,
+      uppercase
+    );
   }
 
   @include for-size(tablet-landscape-up) {
@@ -60,10 +64,35 @@
   }
 }
 
+.principle-description {
+  width: 100%;
+
+  @include font(
+    Roboto,
+    normal,
+    normal,
+    14px,
+    24px,
+    left,
+    0.03em,
+    $subtitle-color,
+    none
+  );
+
+  line-height: 24px;
+}
+
 .principles-item-box {
+  @include for-size(phone-only) {
+
+  }
+
   @include for-size(tablet-portrait-up) {
     width: 450px;
     margin: 15px;
+    &:first-child() {
+      margin-top: $phone--header-top;
+    };
   }
 
   @include for-size(tablet-landscape-up) {
@@ -103,25 +132,6 @@
   height: 70px;
 }
   
-.principle-description {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-
-  @include font(
-    Roboto,
-    normal,
-    normal,
-    14px,
-    24px,
-    left,
-    0.03em,
-    $subtitle-color,
-    none
-  );
-
-  line-height: 24px;
-}
   
 /* 
  * ways of development section
@@ -129,6 +139,10 @@
  */
 
  .section-media-hide {
+    @include for-size(phone-only) {
+
+    }
+
     @include for-size(tablet-portrait-up) {
       display: none;
     }
@@ -143,6 +157,10 @@
   }
 
 .ways-item {
+  @include for-size(phone-only) {
+    display: none;
+  }
+
   @include for-size(tablet-portrait-up) {
     display: none;
   }
@@ -215,6 +233,10 @@
   & > .social-list {
     margin-right: auto;
     margin-left: auto;
+  }
+
+  @include for-size(phone-only) {
+
   }
 
   @include for-size(tablet-portrait-up) {
@@ -300,18 +322,29 @@
  */
 
 .clients-item-box { 
+  @include for-size(phone-only) {
+    width: calc((100% - 30px * 1) / 2);
+    max-width: 210px;
+    height: 90px;
+    margin: 15px;
+  }
+
   @include for-size(tablet-portrait-up) {
-    // width: calc((100% - 30px * 1) / 2);
+    width: calc((100% - 30px * 1) / 2);
     max-width: 210px;
     height: 90px;
     margin: 15px;
   }
 
   @include for-size(tablet-landscape-up) {
-    // width: calc((100% - 30px * 2) / 3);
+    width: calc((100% - 30px * 2) / 3);
     width: 225px;
     height: 90px;
     margin: 15px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   @include for-size(big-desktop-up) {

@@ -1,111 +1,146 @@
-  .container {
-    
-    
-    padding-top: $section-padding;
-    
-    padding-bottom: $section-padding;
-    
+.container {
+  @include for-size(phone-only) {
+    // margin-top: $phone--section-padding;
+    // margin-bottom: $phone--section-padding;
+  }
+  
+  @include for-size(tablet-portrait-up) {
+    width: 100%;
+    margin-right: -30px;
 
-    @include for-size(tablet-portrait-up) {
-      width: 100%;
-    }
-  
-    @include for-size(tablet-landscape-up) {
-     width: 100%;
-    }
-  
-    @include for-size(big-desktop-up) {
-      display: block;
-      max-width: 1200px;
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+    // margin-top: $phone--section-padding;
+    // margin-bottom: $phone--section-padding;
   }
 
-  .container-header {
-    display: block;
-    margin-bottom: 50px;
+  @include for-size(tablet-landscape-up) {
+    width: 100%;
+  }
 
-    @include font(
-      Roboto, 
-      normal, 
-      bold, 
-      36px, 
-      42px, 
-      center, 
-      0.03em, 
-      $title-color, 
-      none
+  @include for-size(big-desktop-up) {
+    display: block;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    padding-top: $section-padding;
+  
+    padding-bottom: $section-padding;
+  }
+}
+
+.container-header {
+  display: block;
+  margin-bottom: 50px;
+
+  @include font(
+    Roboto, 
+    normal, 
+    bold, 
+    36px, 
+    42px, 
+    center, 
+    0.03em, 
+    $title-color, 
+    none
+  );
+
+
+
+  @include for-size(phone-only) {
+    margin-top: $phone--header-top;
+    margin-bottom: $phone--header-bottom;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: $phone--header-top;
+    margin-bottom: $phone--header-bottom;
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+
+  }
+}
+
+footer .container {
+
+  @include for-size(phone-only) {
+
+  }
+
+  @include for-size(tablet-portrait-up) {
+    padding-bottom: 0px;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    @include flex(
+      flex,
+      row,
+      wrap,
+      space-between,
+      baseline
+    );
+
+    // padding-right: 90px;
+    
+    // padding-left: 75px;
+  }
+
+  @include for-size(big-desktop-up) {
+    padding-bottom: 0px;
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      center,
+      baseline
+    );
+
+    padding-bottom: 0px;
+  }
+}
+
+.container-box {
+  // width: 100%;
+
+  @include for-size(phone-only) {
+
+  }
+
+  @include for-size(tablet-portrait-up) {
+    @include flex(
+      flex,
+      row,
+      wrap,
+      space-between,
+      stretch
+    );
+
+    // margin-right: -30px;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    @include flex(
+      flex,
+      row,
+      wrap,
+      space-between,
+      stretch
     );
   }
 
-  .container-box {
-    // width: 100%;
-
-    @include for-size(tablet-portrait-up) {
-      @include flex(
-        flex,
-        row,
-        wrap,
-        space-between,
-        stretch
-      );
-
-      margin-right: -30px;
-    }
-  
-    @include for-size(tablet-landscape-up) {
-      @include flex(
-        flex,
-        row,
-        wrap,
-        space-between,
-        stretch
-      );
-    }
-  
-    @include for-size(big-desktop-up) {
-      @include flex(
-        flex,
-        row,
-        nowrap,
-        space-between,
-        stretch
-      );
-    }
+  @include for-size(big-desktop-up) {
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      space-between,
+      stretch
+    );
   }
-
-  footer .container {
-    @include for-size(tablet-portrait-up) {
-      padding-bottom: 0px;
-    }
-  
-    @include for-size(tablet-landscape-up) {
-      @include flex(
-        flex,
-        row,
-        wrap,
-        space-between,
-        baseline
-      );
-  
-      // padding-right: 90px;
-     
-      // padding-left: 75px;
-    }
-  
-    @include for-size(big-desktop-up) {
-      padding-bottom: 0px;
-      @include flex(
-        flex,
-        row,
-        nowrap,
-        center,
-        baseline
-      );
-
-      padding-bottom: 0px;
-    }
-  }
+}

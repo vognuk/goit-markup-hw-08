@@ -34,7 +34,25 @@
   }
 
 .hero .button-style {
-  margin-bottom: 224px;
+  
+  @include for-size(phone-only) {
+    margin-bottom: 118px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 118px;
+    margin-left: auto;
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    margin-bottom: 224px;
+  }
 }
 
 .portfolio-button {

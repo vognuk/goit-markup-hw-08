@@ -227,6 +227,10 @@
  */
 
 .footer-form {
+  @include for-size(phone-only) {
+
+  }
+
   @include for-size(tablet-portrait-up) {
    
   }
