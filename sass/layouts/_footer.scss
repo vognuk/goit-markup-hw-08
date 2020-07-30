@@ -7,11 +7,7 @@ footer {
   background-color: $footer-color;
 
   @include for-size(phone-only) {
-      
-  }
-
-  @include for-size(tablet-portrait-up) {
-    // width: 100%;
+          // width: 100%;
     padding-bottom: 60px;
 
     @include flex(
@@ -21,6 +17,10 @@ footer {
       center,
       center
     );
+  }
+
+  @include for-size(tablet-portrait-up) {
+
   }
 
   @include for-size(tablet-landscape-up) {
@@ -36,10 +36,6 @@ footer {
     
 .footer-contacts {
   @include for-size(phone-only) {
-      
-  }
-
-  @include for-size(tablet-portrait-up) {
     @include flex(
       flex,
       column,
@@ -49,7 +45,11 @@ footer {
     );
 
     margin-top:  $phone--header-top;
-    margin-bottom:  $phone--header-top;
+    margin-bottom:  $phone--header-top; 
+  }
+
+  @include for-size(tablet-portrait-up) {
+
   }
 
   @include for-size(tablet-landscape-up) {
@@ -71,13 +71,7 @@ footer {
 }
     
 footer .contact-link {
- 
-
   @include for-size(phone-only) {
-    
-  }
-
-  @include for-size(tablet-portrait-up) {
     line-height: 19px;
 
     @include flex(
@@ -87,6 +81,10 @@ footer .contact-link {
       center,
       center
     );
+  }
+
+  @include for-size(tablet-portrait-up) {
+
   }
 
   @include for-size(tablet-landscape-up) {
@@ -125,10 +123,6 @@ footer .contact-link {
     
 .footer-subscribe {
   @include for-size(phone-only) {
-      
-  }
-
-  @include for-size(tablet-portrait-up) {
     margin-bottom: 20px;
 
     @include font(
@@ -141,7 +135,11 @@ footer .contact-link {
       0.03em,
       $button-text-color,
       uppercase
-    );
+    );  
+  }
+
+  @include for-size(tablet-portrait-up) {
+
   }
 
   @include for-size(tablet-landscape-up) {

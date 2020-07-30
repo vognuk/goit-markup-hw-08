@@ -2062,7 +2062,7 @@ footer {
   background-color: #2f303a;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 479px) {
   footer {
     padding-bottom: 60px;
     display: -webkit-box;
@@ -2090,7 +2090,7 @@ footer {
 }
 
 /* address column */
-@media (min-width: 480px) {
+@media (max-width: 479px) {
   .footer-contacts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2134,7 +2134,7 @@ footer {
   }
 }
 
-@media (min-width: 480px) {
+@media (max-width: 479px) {
   footer .contact-link {
     line-height: 19px;
     display: -webkit-box;
@@ -2183,7 +2183,7 @@ footer {
 }
 
 /* --- Subscribe */
-@media (min-width: 480px) {
+@media (max-width: 479px) {
   .footer-subscribe {
     margin-bottom: 20px;
     font-family: Roboto;

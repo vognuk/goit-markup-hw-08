@@ -26,6 +26,8 @@ header {
   
     background-color: $button-text-color;
     border: 1px solid #ECECEC;
+
+    // overflow: hidden;
   }
 
   @include for-size(tablet-portrait-up) {
