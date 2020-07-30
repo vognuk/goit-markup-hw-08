@@ -22,7 +22,19 @@
               <span class="logo-2-2"><span class="logo-1-2">Web</span> Studio</span>
             </a>
           </div>
-          <nav class="header-navigation">
+
+          <button 
+            class="pull-down-button" 
+            type="button" 
+            aria-controls="menu-container"
+            data-menu-button>
+            <svg class="pull-down-open-svg" width="32px" height="32px" aria-label="Mobile menu switcher">
+              <use class="icon-pull-down-button" href="./images/sprite.svg#icon-pull-down-button"></use>
+              <use class="icon-close-button" href="./images/sprite.svg#icon-close-button"></use>
+            </svg>
+          </button>
+
+          <nav class="header-navigation" id="menu-container" data-menu>
             <ul class="header-pages">
               <li>
                 <a class="main-menu-link current-page" href="./index.html"
@@ -39,9 +51,10 @@
               <li>
                 <a class="main-menu-link" href="">Контакты</a>
               </li>
-            <!-- </ul> -->
+            </ul>
             <!-- Header contacts -->
-            <!-- <ul class="header-contacts"> -->
+            <ul class="header-address">
+              <!-- class="header-contacts" -->
               <li>
                 <a class="main-menu-link" href="mailto:info@devstudio.com"
                   ><svg
@@ -71,23 +84,6 @@
             </ul>
           </nav>
           <!-- Pull-down mobile menu -->
-          <div class="pull-down-box">
-            <button type="button" class="button-pull-down-open" data-menu>
-              <svg class="pull-down-open-svg" width="32px" height="32px">
-                <use href="./images/sprite.svg#icon-pull-down-button"></use>
-              </svg>
-            </button>
-
-            <button type="button" class="button-pull-down-close" data-menu>
-              <svg class="pull-down-close-svg" width="40px" height="40px">
-                <use href="./images/sprite.svg#icon-close-button"></use>
-              </svg>
-            </button>
-  
-            <div class="pull-down-menu-close" is-open>
-
-            </div>
-          </div>   
         </div>
       
     </header>
@@ -719,5 +715,6 @@
 
   </main>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

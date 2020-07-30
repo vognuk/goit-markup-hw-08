@@ -6,10 +6,6 @@
 /* menu */
 .menu-list {
   @include for-size(phone-only) {
-      
-  }
-
-  @include for-size(tablet-portrait-up) {
     @include flex(
       flex,
       row,
@@ -17,7 +13,11 @@
       left,
       flex-start
     );
-    margin-bottom: 40px;
+    margin-bottom: 40px;  
+  }
+
+  @include for-size(tablet-portrait-up) {
+
   }
 
   @include for-size(tablet-landscape-up) {
@@ -33,18 +33,18 @@
       flex-start
     );
     margin-bottom: 50px;
-}
+  }
 }
   
 /* - Portfolio cards---------------------------------- */
   
 .portfolio-list {
   @include for-size(phone-only) {
-      
+    margin-bottom: 60px;
   }
 
   @include for-size(tablet-portrait-up) {
-    margin-bottom: 60px;
+
   }
 
   @include for-size(tablet-landscape-up) {
@@ -87,13 +87,13 @@
   }
 
   @include for-size(phone-only) {
-      
-  }
-
-  @include for-size(tablet-portrait-up) {
     margin-right: 15px;
     margin-left: 15px;
     margin-bottom: 30px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+
   }
 
   @include for-size(tablet-landscape-up) {

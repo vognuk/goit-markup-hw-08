@@ -105,10 +105,6 @@ footer .container {
   // width: 100%;
 
   @include for-size(phone-only) {
-
-  }
-
-  @include for-size(tablet-portrait-up) {
     @include flex(
       flex,
       row,
@@ -119,6 +115,10 @@ footer .container {
 
     margin-bottom:  $phone--header-top;
     // margin-right: -30px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+
   }
 
   @include for-size(tablet-landscape-up) {

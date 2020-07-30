@@ -1,17 +1,19 @@
 .logo-container {
-
-
     @include for-size(phone-only) {
-        
+        position: absolute;
+        // line-height: 60px;
+        top: 0;
+        left: 0;
+
+        // transform: translate(0, 80%);
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: 15px;
     }
 
     @include for-size(tablet-portrait-up) {
-        position: absolute;
-        line-height: 60px;
-        // top: 0;
-        // left: 0;
 
-        // transform: translate(50%, 80%);
+
     }
 
     @include for-size(tablet-landscape-up) {
@@ -19,11 +21,11 @@
     }
 
     @include for-size(big-desktop-up) {
-        display: block;
-        margin-right: 85px;
+        // display: block;
+        // margin-right: 85px;
       
-        line-height: 80px;
-        white-space: nowrap;
+        // line-height: 80px;
+        // white-space: nowrap;
     }
   }
 
@@ -33,43 +35,175 @@
   }
   
 .logo-1-2 {
-    @include font(
-        Raleway, 
-        normal, 
-        bold, 
-        26px, 
-        31px, 
-        center, 
-        0.03em, 
-        $header-blue, 
-        none
-    );
+    @include for-size(phone-only) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            24px, 
+            28px, 
+            center, 
+            0.03em, 
+            $header-blue, 
+            none
+        );
+    }
+
+    @include for-size(tablet-portrait-up) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            24px, 
+            28px, 
+            center, 
+            0.03em, 
+            $header-blue, 
+            none
+        );
+    }
+
+    @include for-size(tablet-landscape-up) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            24px, 
+            28px, 
+            center, 
+            0.03em, 
+            $header-blue, 
+            none
+        );
+    }
+
+    @include for-size(big-desktop-up) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            26px, 
+            31px, 
+            center, 
+            0.03em, 
+            $header-blue, 
+            none
+        );
+    }
 }
 
 .logo-2-2 {
-    @include font(
-        Raleway, 
-        normal, 
-        bold, 
-        26px, 
-        31px, 
-        center,
-        0.03em, 
-        $logo-color-2-2, 
-        none
-    );
+    @include for-size(phone-only) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            24px, 
+            28px, 
+            center, 
+            0.03em, 
+            $logo-color-2-2, 
+            none
+        );
+    }
+
+    @include for-size(tablet-portrait-up) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            24px, 
+            28px, 
+            center, 
+            0.03em, 
+            $logo-color-2-2, 
+            none
+        );
+    }
+
+    @include for-size(tablet-landscape-up) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            24px, 
+            28px, 
+            center, 
+            0.03em, 
+            $logo-color-2-2, 
+            none
+        );
+    }
+
+    @include for-size(big-desktop-up) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            26px, 
+            31px, 
+            center, 
+            0.03em, 
+            $logo-color-2-2, 
+            none
+        );
+    }
 }
 
 .logo-2-3 {
-    @include font(
-        Raleway, 
-        normal, 
-        bold, 
-        26px, 
-        31px, 
-        center,
-        0.03em, 
-        $button-text-color, 
-        none
-    );
+    @include for-size(phone-only) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            24px, 
+            28px, 
+            center, 
+            0.03em, 
+            $button-text-color, 
+            none
+        );
+    }
+
+    @include for-size(tablet-portrait-up) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            24px, 
+            28px, 
+            center, 
+            0.03em, 
+            $button-text-color, 
+            none
+        );
+    }
+
+    @include for-size(tablet-landscape-up) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            24px, 
+            28px, 
+            center, 
+            0.03em, 
+            $button-text-color, 
+            none
+        );
+    }
+
+    @include for-size(big-desktop-up) {
+        @include font(
+            Raleway, 
+            normal, 
+            bold, 
+            26px, 
+            31px, 
+            center, 
+            0.03em, 
+            $button-text-color, 
+            none
+        );
+    }
 }

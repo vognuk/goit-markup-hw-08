@@ -11,18 +11,32 @@
   }
   
   
-body {
-    padding-top: 80px;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  a:visited {
-    text-decoration: none;
+body {  
+  @include for-size(phone-only) {
+      
   }
 
-  li {
-    list-style-type: none;
+  @include for-size(tablet-portrait-up) {
+    
   }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+    
+  @include for-size(big-desktop-up) {
+    padding-top: 80px;
+  }
+}
+  
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}

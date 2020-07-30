@@ -47,6 +47,17 @@
       }
     }
   }
+
+  @mixin list-margin ($margin-bottom) {
+    & li:not(:last-child){
+      margin-bottom: $margin-bottom;
+    }
+  }
+  
+//  usage
+//   @include list-margin (
+//   16px
+//   );
   
   // usage
 //   .my-box {
@@ -92,3 +103,6 @@
 // @include for-size(big-desktop-up) {
 
 // }
+
+
+

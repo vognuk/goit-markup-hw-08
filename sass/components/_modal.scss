@@ -12,35 +12,52 @@
     background-color: $backdrop-color;
   }
   
-  .modal {
-    position: absolute;
-    z-index: 20;
+.modal {
+  position: absolute;
+  z-index: 20;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.14),
+  0px 3px 1px rgba(0, 0, 0, 0.12);
+  
+  background-color: $button-text-color; 
+  border-radius: 4px;
+
+  @include for-size(phone-only) {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    width: 100%;
+  }
+
+  @include for-size(tablet-portrait-up) {
+
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
-    padding-top: 0px;
-    padding-bottom: 0px;
    
     max-width: 528px;
     width: 100%;
-  
-    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.14),
-    0px 3px 1px rgba(0, 0, 0, 0.12);
-    
-    background-color: $button-text-color; 
-    border-radius: 4px;
+  }
+}
 
-  }
-  
-  .is-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

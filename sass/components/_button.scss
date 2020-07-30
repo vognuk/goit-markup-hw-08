@@ -33,17 +33,17 @@
 
   }
 
-.button-pull-down-open {
+.pull-down-button {
   position: absolute;
-  z-index: 25;
+  // z-index: 25;
   border: none;
 
   width: 40px;
   height: 40px;
 
-  // transform: translate(0px, 0px);
-  transform: translate(-50%, -50%);
-  // top: -80%;
+  margin: 10px 15px 10px 15px;
+  
+  transform: translate(0, 75%);
   right: 0;
   padding-bottom: 0px;
 
@@ -59,12 +59,43 @@
   &:hover {
     @extend %link-animation-placeholder;
   }
+  
+  & .icon-close-button {
+    display: none;
+  }
+
+  &.is-open .icon-pull-down-button {
+    display: none;
+  }
+
+  &.is-open .icon-close-button {
+    display: block;
+  }
+
+  @include for-size(phone-only) {
+      
+  }
+
+  @include for-size(tablet-portrait-up) {
+    
+  }
+
+  @include for-size(tablet-landscape-up) {
+    display: none;
+  }
+
+  @include for-size(big-desktop-up) {
+    display: none;
+  }
+
 }
 
 .button-pull-down-close {
   position: absolute;
   z-index: 30;
   border: none;
+
+  display: none;
 
   width: 40px;
   height: 40px;
@@ -93,14 +124,14 @@
 .hero .button-style {
   
   @include for-size(phone-only) {
-    margin-bottom: 118px;
-  }
-
-  @include for-size(tablet-portrait-up) {
     margin-top: 30px;
     margin-right: auto;
     margin-bottom: 118px;
     margin-left: auto;
+  }
+
+  @include for-size(tablet-portrait-up) {
+
   }
 
   @include for-size(tablet-landscape-up) {
@@ -138,11 +169,11 @@
   background-color: $team-box-color;
 
   @include for-size(phone-only) {
-      
+    margin-bottom: 15px;
   }
 
   @include for-size(tablet-portrait-up) {
-    margin-bottom: 15px;
+    
   }
 
   @include for-size(tablet-landscape-up) {
@@ -166,12 +197,12 @@
   border: none;
 
   @include for-size(phone-only) {
-      
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @include for-size(tablet-portrait-up) {
-    margin-right: auto;
-    margin-left: auto;
+
   }
 
   @include for-size(tablet-landscape-up) {
