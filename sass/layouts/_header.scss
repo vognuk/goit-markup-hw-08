@@ -31,7 +31,16 @@ header {
   }
 
   @include for-size(tablet-portrait-up) {
+    position: relative;
+    height: 60px;
+  
+    width: 100%;
+    top: 0px;
+  
+    background-color: $button-text-color;
+    border: 1px solid #ECECEC;
 
+    // overflow: hidden;
   }
 
   @include for-size(tablet-landscape-up) {

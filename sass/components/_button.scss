@@ -36,17 +36,15 @@
 .pull-down-button {
   position: absolute;
   // z-index: 25;
-  border: none;
-
+  top: 0;
+  right: 0;
+  
   width: 40px;
   height: 40px;
-
   margin: 10px 15px 10px 15px;
-  
-  transform: translate(0, 75%);
-  right: 0;
   padding-bottom: 0px;
 
+  border: none;
 
   & svg {
     width: 40px;
@@ -97,8 +95,8 @@
 
   display: none;
 
-  width: 40px;
-  height: 40px;
+  width: 16px;
+  height: 16px;
 
   // transform: translate(0px, 0px);
   transform: translate(-50%, -50%);
@@ -131,7 +129,10 @@
   }
 
   @include for-size(tablet-portrait-up) {
-
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 118px;
+    margin-left: auto;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -173,7 +174,7 @@
   }
 
   @include for-size(tablet-portrait-up) {
-    
+    margin-bottom: 15px;
   }
 
   @include for-size(tablet-landscape-up) {

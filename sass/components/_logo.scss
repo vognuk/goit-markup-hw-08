@@ -12,8 +12,15 @@
     }
 
     @include for-size(tablet-portrait-up) {
+        position: absolute;
+        // line-height: 60px;
+        top: 0;
+        left: 0;
 
-
+        // transform: translate(0, 80%);
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: 15px;
     }
 
     @include for-size(tablet-landscape-up) {

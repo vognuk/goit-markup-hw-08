@@ -13,11 +13,22 @@
       left,
       flex-start
     );
+
+    margin-top: 60px;
     margin-bottom: 40px;  
   }
 
   @include for-size(tablet-portrait-up) {
+    @include flex(
+      flex,
+      row,
+      wrap,
+      left,
+      flex-start
+    );
 
+    margin-top: 60px;
+    margin-bottom: 40px;  
   }
 
   @include for-size(tablet-landscape-up) {
@@ -44,7 +55,7 @@
   }
 
   @include for-size(tablet-portrait-up) {
-
+    margin-bottom: 60px;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -93,7 +104,9 @@
   }
 
   @include for-size(tablet-portrait-up) {
-
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -112,7 +125,11 @@
 }
 
 .portfolio-image {
+  // width: 100%;
+  display: block;
   width: 100%;
+  height: auto;
+
 }
 
 .portfolio-jumping-box {

@@ -140,7 +140,7 @@
 
  .section-media-hide {
     @include for-size(phone-only) {
-
+      display: none;
     }
 
     @include for-size(tablet-portrait-up) {

@@ -21,12 +21,27 @@
 
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.08),
     0px 1px 1px rgba(0, 0, 0, 0.04);
-
-  
   }
 
   @include for-size(tablet-portrait-up) {
+    position: absolute;
+    z-index: 10;
+    transform: translate(0, 1px);
+    top: 60px;
+    left: 0;
+    width: 100%;
+    max-width: 480px;
 
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+
+    background-color: $button-text-color;
+
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 1px rgba(0, 0, 0, 0.04);
   }
 
   @include for-size(tablet-landscape-up) {
@@ -63,10 +78,30 @@
        $title-color,
        none
      );
-   }
+   
   }
-  @include for-size(tablet-portrait-up) {
 
+  @include for-size(tablet-portrait-up) {
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      center,
+      center
+    );
+   
+    @include font(
+      Roboto,
+      normal,
+      500,
+      18px,
+      21px,
+      center,
+      0.02em,
+      $title-color,
+      none
+    );
+  }
 
   @include for-size(tablet-landscape-up) {
        
@@ -104,7 +139,12 @@
   }
 
   @include for-size(tablet-portrait-up) {
+    margin-top: 60px;
+    margin-bottom: 60px;
 
+    @include list-margin (
+      40px
+    );
   }
 
   @include for-size(tablet-landscape-up) {
@@ -132,7 +172,11 @@
   }
 
   @include for-size(tablet-portrait-up) {
+    margin-bottom: 60px;
 
+    @include list-margin (
+      16px
+    );
   }
 
   @include for-size(tablet-landscape-up) {
@@ -151,7 +195,8 @@
   }
 
   @include for-size(tablet-portrait-up) {
- 
+    height: 21px;
+    fill: $subtitle-color;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -204,7 +249,21 @@
   }
 
   @include for-size(tablet-portrait-up) {
+    display: inline-flex;
 
+    @include font(
+      Roboto,
+      normal,
+      500,
+      14px,
+      16px,
+      center,
+      0.02em,
+      $subtitle-color,
+      none
+    );
+    
+    line-height: 80px;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -281,7 +340,18 @@
   }
 
   @include for-size(tablet-portrait-up) {
-
+    @include font(
+      Roboto,
+      normal,
+      medium,
+      18px,
+      21px,
+      center,
+      0.02em,
+      $subtitle-color,
+      none
+    );
+    // padding-right: 10px;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -305,36 +375,14 @@
   }
 }
 
-.current-page {
-  color: $header-blue;
- 
-  &:after {
-    position: absolute;
-    height: 4px;
-    display: block;
-    content: '';
+.current-page-studio {
+  @include current-page (60px, 292px);
+}
 
-    border-radius: 2px;
-    background-color: $header-blue;
+.current-page-portfolio {
+  @include current-page (100px, 231px);
+}
 
-    @include for-size(phone-only) {
-      width: 60px;
-      bottom: 292px;
-    }
-
-    @include for-size(tablet-portrait-up) {
-
-    }
-
-    @include for-size(tablet-landscape-up) {
-
-    }
-
-    @include for-size(big-desktop-up) {
-      width: 100%;
-      height: 4px;
-      left: 0px;
-      bottom: 0px;
-    }
-  }
+.portfolio-menu {
+  margin-left: 15px;
 }
