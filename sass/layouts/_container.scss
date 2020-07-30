@@ -1,16 +1,15 @@
 .container {
   @include for-size(phone-only) {
+    position: relative;
+    width: 100%;
+    margin-right: 30px;
+
     // margin-top: $phone--section-padding;
     // margin-bottom: $phone--section-padding;
   }
   
   @include for-size(tablet-portrait-up) {
-    position: relative;
-    width: 100%;
-    margin-right: -30px;
 
-    // margin-top: $phone--section-padding;
-    // margin-bottom: $phone--section-padding;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -69,12 +68,12 @@
 footer .container {
 
   @include for-size(phone-only) {
-
+    padding-bottom: 0px;
+    margin-right: 15px;
   }
 
   @include for-size(tablet-portrait-up) {
-    padding-bottom: 0px;
-    margin-right: 15px;
+
   }
 
   @include for-size(tablet-landscape-up) {
@@ -112,9 +111,8 @@ footer .container {
       space-between,
       stretch
     );
-
-    margin-bottom:  $phone--header-top;
     // margin-right: -30px;
+    margin-bottom:  $phone--header-top;
   }
 
   @include for-size(tablet-portrait-up) {

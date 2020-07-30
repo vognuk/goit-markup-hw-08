@@ -97,7 +97,7 @@
 
   @include for-size(tablet-landscape-up) {
     width: calc((100% - 30px * 1) / 2);
-    margin: 15px;
+    margin: 15px 15px 15px 15px;
   }
 
   @include for-size(big-desktop-up) {
@@ -237,7 +237,7 @@
 
   @include for-size(phone-only) {
     width: 100%;
-    margin: 15px;
+    margin: 15px 15px 15px 15px;
   }
 
   @include for-size(tablet-portrait-up) {
@@ -247,7 +247,7 @@
 
   @include for-size(tablet-landscape-up) {
     width: calc((100% - 30px * 2) / 3);
-    margin: 15px;
+    margin: 15px 15px 15px 15px;
 
     &:nth-child(4n) {
       margin-right: 0px;
@@ -325,9 +325,9 @@
 .clients-item-box { 
   @include for-size(phone-only) {
     width: calc((100% - 30px * 1) / 2);
-    max-width: 210px;
+    max-width: 209px;
     height: 90px;
-    margin: 15px;
+    margin: 15px 15px 15px 15px;
   }
 
   @include for-size(tablet-portrait-up) {

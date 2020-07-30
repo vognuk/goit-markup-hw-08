@@ -14,60 +14,77 @@
   </head>
   <body>
     <!--main menu container-->
-    <header>
+    <header>    
       <div class="container">
         <div class="logo-container">
           <a class="logo-link" href="./index.html">
             <span class="logo-2-2"><span class="logo-1-2">Web</span> Studio</span>
           </a>
         </div>
-        <ul class="header-menu header-pages">
-          <li>
-            <a class="main-menu-link" href="./index.html"
-              >Студия</a
-            >
-          </li>
-          <li>
-            <a
-              class="main-menu-link current-page"
-              href="./portfolio.html"
-              >Портфолио</a
-            >
-          </li>
-          <li>
-            <a class="main-menu-link" href="">Контакты</a>
-          </li>
-        </ul>
-        <!-- Header contacts -->
-        <ul class="header-menu header-contacts">
-          <li>
-            <a class="contact-link" href="mailto:info@devstudio.com"
-              ><svg
-                class="header-icon"
-                width="10px"
-                height="15px"
-                preserveAspectRatio="xMaxYMax meet"
+
+        <button 
+          class="pull-down-button" 
+          type="button" 
+          aria-controls="menu-container"
+          data-menu-button>
+          <svg class="pull-down-open-svg" width="32px" height="32px" aria-label="Mobile menu switcher">
+            <use class="icon-pull-down-button" href="./images/sprite.svg#icon-pull-down-button"></use>
+            <use class="icon-close-button" href="./images/sprite.svg#icon-close-button"></use>
+          </svg>
+        </button>
+
+        <nav class="header-navigation" id="menu-container" data-menu>
+          <ul class="header-pages">
+            <li>
+              <a class="main-menu-link current-page" href="./index.html"
+                >Студия</a
               >
-                <use href="./images/sprite.svg#icon-contact-envelope"></use>
-              </svg>
-              <span class="header-number">info@devstudio.com</span></a
-            >
-          </li>
-          <li>
-            <a class="contact-link" href="tel:+380991111111"
-              ><svg
-                class="header-icon"
-                width="10px"
-                height="15px"
-                preserveAspectRatio="xMaxYMax meet"
+            </li>
+            <li>
+              <a
+                class="main-menu-link"
+                href="./portfolio.html"
+                >Портфолио</a
               >
-                <use href="./images/sprite.svg#icon-contact-smartphone"></use>
-              </svg>
-              <span class="header-number">+38 099 111 11 11</span>
-            </a>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <a class="main-menu-link" href="">Контакты</a>
+            </li>
+          </ul>
+          <!-- Header contacts -->
+          <ul class="header-address">
+            <!-- class="header-contacts" -->
+            <li>
+              <a class="main-menu-link" href="mailto:info@devstudio.com"
+                ><svg
+                  class="header-icon"
+                  width="32px"
+                  height="32px"
+                  preserveAspectRatio="xMaxYMax meet"
+                >
+                  <use href="./images/sprite.svg#icon-contact-envelope"></use>
+                </svg>
+                <span class="header-number">info@devstudio.com</span></a
+              >
+            </li>
+            <li>
+              <a class="main-menu-link" href="tel:+380991111111"
+                ><svg
+                  class="header-icon"
+                  width="32px"
+                  height="32px"
+                  preserveAspectRatio="xMaxYMax meet"
+                >
+                  <use href="./images/sprite.svg#icon-contact-smartphone"></use>
+                </svg>
+                <span class="header-number">+38 099 111 11 11</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Pull-down mobile menu -->
       </div>
+    
     </header>
 
     <!--Portfolio container-->
@@ -118,11 +135,38 @@
                 href="https://www.facebook.com/"
               >
                 <div class="portfolio-jumping-box">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-1-480.webp 480w,
+                        ./images/portfolio-1-480@2x.webp 480w,
+                        ./images/portfolio-1-768.webp 768w,
+                        ./images/portfolio-1-768@2x.webp 768w,
+                        ./images/portfolio-1-1200.webp 1200w,
+                        ./images/portfolio-1-1200@2x.webp 1200w
+                      "
+                      type="image/webp"
+                    />
+              
+                    <img
+                      srcset="
+                          ./images/portfolio-1-480.jpg 480w,
+                          ./images/portfolio-1-480@2x.jpg 480w,
+                          ./images/portfolio-1-768.jpg 768w,
+                          ./images/portfolio-1-768@2x.jpg 768w,
+                          ./images/portfolio-1-1200.jpg 1200w,
+                          ./images/portfolio-1-1200@2x.jpg 1200w
+                      "
+                      src="./imges/portfolio-1-1200.jpg"
+                      alt="Portfolio-1"
+                      sizes="(min-width: 480px) 25vw, (min-width: 768px) 50vw,  (min-width: 1200px) 100vw"
+                    />
+                  </picture>
+                  <!-- <img
                     class="serv-class portfolio-image card-image"
                     src="./images/portfolio-1.jpg"
                     alt="portfolio-1"
-                  />
+                  /> -->
                   <p class="jumping-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                 </div>
                 <h3 class="serv-class card-title">Технокряк</h3>
@@ -377,5 +421,8 @@
       </div>
       <!-- <p class="copyright">2020 | Developed by GoIT Students</p> -->
     </footer>
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
