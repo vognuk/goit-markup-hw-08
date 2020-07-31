@@ -1,0 +1,148 @@
+.address-post {
+  @include font(
+    Roboto, 
+    normal, 
+    normal, 
+    14px, 
+    24px, 
+    left, 
+    0.03em, 
+    $button-text-color, 
+    none
+  );
+
+  margin-top: 20px;
+}
+
+.contact-link {
+  & {
+    @extend %link-animation-placeholder;
+
+    &:hover  svg,
+    &:focus-within  svg,
+    &:active svg {
+      // color: $header-blue;
+      fill: $header-blue;
+      transition: $main-transition;
+    }
+  }
+
+  @include for-size(phone-only) {
+    display: inline-flex;
+
+    @include font(
+      Roboto,
+      normal,
+      500,
+      14px,
+      16px,
+      center,
+      0.02em,
+      $subtitle-color,
+      none
+    );
+    
+    // line-height: 80px;
+  
+  }
+
+  @include for-size(tablet-portrait-up) {
+    display: inline-flex;
+
+    @include font(
+      Roboto,
+      normal,
+      500,
+      14px,
+      16px,
+      center,
+      0.02em,
+      $subtitle-color,
+      none
+    );
+    
+    // line-height: 80px;
+  }
+
+  @include for-size(tablet-landscape-up) {
+
+  }
+
+  @include for-size(big-desktop-up) {
+    display: inline-flex;
+
+    @include font(
+      Roboto,
+      normal,
+      500,
+      14px,
+      16px,
+      center,
+      0.02em,
+      $subtitle-color,
+      none
+    );
+    
+    // line-height: 80px;
+  }
+}
+
+.footer-address {
+  @include for-size(phone-only) {
+    @include list-margin(9px);
+
+    & li {
+      @include flex(
+        flex,
+        row,
+        nowrap,
+        center,
+        center
+      );
+    }
+  }
+
+  @include for-size(tablet-portrait-up) {
+    @include list-margin(9px);
+
+    & li {
+      @include flex(
+        flex,
+        row,
+        nowrap,
+        center,
+        center
+      );
+    }
+  }
+
+  @include for-size(tablet-landscape-up) {
+    @include list-margin(9px);
+
+    & li {
+      @include flex(
+        flex,
+        row,
+        nowrap,
+        center,
+        center
+      );
+    }
+  }
+
+  @include for-size(big-desktop-up) {
+    @include list-margin(9px);
+
+    & li {
+      @include flex(
+        flex,
+        row,
+        nowrap,
+        left,
+        flex-start
+      );
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

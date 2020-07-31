@@ -3,6 +3,7 @@
  *
  */
 header {
+  width: 100%;
   & .container {
     @include flex(
       flex, 
@@ -11,12 +12,11 @@ header {
       space-between, 
       center
     );
-  
+    width: 100%;
     padding-top: 0px;
     padding-bottom: 0px;
   }
-
-
+  
   @include for-size(phone-only) {
     position: relative;
     height: 60px;

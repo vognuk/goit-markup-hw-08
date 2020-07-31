@@ -216,78 +216,7 @@
 
 /* contacts animation */
 
-.contact-link {
-  & {
-    @extend %link-animation-placeholder;
 
-    &:hover  svg,
-    &:focus-within  svg,
-    &:active svg {
-      // color: $header-blue;
-      fill: $header-blue;
-      transition: $main-transition;
-    }
-  }
-
-  @include for-size(phone-only) {
-    display: inline-flex;
-
-    @include font(
-      Roboto,
-      normal,
-      500,
-      14px,
-      16px,
-      center,
-      0.02em,
-      $subtitle-color,
-      none
-    );
-    
-    line-height: 80px;
-  
-  }
-
-  @include for-size(tablet-portrait-up) {
-    display: inline-flex;
-
-    @include font(
-      Roboto,
-      normal,
-      500,
-      14px,
-      16px,
-      center,
-      0.02em,
-      $subtitle-color,
-      none
-    );
-    
-    line-height: 80px;
-  }
-
-  @include for-size(tablet-landscape-up) {
-
-  }
-
-  @include for-size(big-desktop-up) {
-    display: inline-flex;
-
-    @include font(
-      Roboto,
-      normal,
-      500,
-      14px,
-      16px,
-      center,
-      0.02em,
-      $subtitle-color,
-      none
-    );
-    
-    line-height: 80px;
-  }
-}
 
 // .header-contacts {
 //   @include for-size(phone-only) {

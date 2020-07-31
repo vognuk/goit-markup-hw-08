@@ -48,19 +48,7 @@
   border-width: 1px;
   border-radius: 4px;
 }
-  
-.form-field {
-  position: relative;
-  left: 0;
-
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin-right: 40px;
-  margin-left: 40px;
-
-  border-radius: 4px;
-}
-  
+   
 .form-label {
   position: absolute;
   left: 0;
@@ -83,15 +71,26 @@
 }
   
 .form-field {
-  &:hover label,
-  &:hover input,
-  &:hover svg,
-  &:focus-within label,
-  &:focus-within input,
-  &:focus-within svg {
-    color: $header-blue;
-    border-color: $header-blue;
-    fill: $header-blue;
+  position: relative;
+  left: 0;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-right: 40px;
+  margin-left: 40px;
+
+  border-radius: 4px;
+  & {
+    &:hover label,
+    &:hover input,
+    &:hover svg,
+    &:focus-within label,
+    &:focus-within input,
+    &:focus-within svg {
+      color: $header-blue;
+      border-color: $header-blue;
+      fill: $header-blue;
+    }
   }
 }
 
@@ -167,6 +166,8 @@
   margin-left: 40px;
   padding-top: 14px;
   padding-bottom: 20px;
+  // max-width: 370px;
+  // width: 100%;
 
   @include font(
     Roboto, 
@@ -235,15 +236,33 @@
       center,
       normal
     );
-
+    width: 100%;
+    padding-bottom:  $phone--header-top;
   }
 
   @include for-size(tablet-portrait-up) {
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      normal
+    );
 
+    width: 100%;
+    padding-bottom:  $phone--header-top;
   }
 
   @include for-size(tablet-landscape-up) {
- 
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      normal
+    );
+    width: 100%;
+    padding-bottom:  $phone--header-top;
   }
 
   @include for-size(big-desktop-up) {
@@ -251,7 +270,7 @@
       flex,
       column,
       nowrap,
-      center,
+      left,
       normal
     );
     width: calc(50% - 15px);
@@ -264,8 +283,13 @@
   }
 
   @include for-size(tablet-portrait-up) {
-    // display: block;
-    // width: 100%;
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      center
+    );
   }
 
   @include for-size(tablet-landscape-up) {
@@ -274,10 +298,10 @@
       column,
       nowrap,
       center,
-      normal
+      center
     );
 
-    // width: 450px;
+    // max-width: 450px;
   }
 
   @include for-size(big-desktop-up) {
@@ -285,8 +309,8 @@
       flex,
       row,
       nowrap,
-      center,
-      normal
+      left,
+      flex-start
     );
   }
 }
@@ -307,32 +331,36 @@
     none
   );
 
+  width: 100%;
+  min-width: 50px;
+  max-width: 450px;
+
   border: 1px solid $input-border-color;
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
   border-radius: 4px;
   background-color: $footer-color;
   border-radius: 4px;
 
   @include for-size(phone-only) {
-          // display: block;
-    width: 450px;
-   
-    // margin-right: 15px;
-    margin-bottom: 20px;
+    margin-right: 15px;
     margin-left: 15px;
+    margin-bottom: 20px;
+
   }
 
   @include for-size(tablet-portrait-up) {
-
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 20px;
   }
 
   @include for-size(tablet-landscape-up) {
-
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
   }
 
   @include for-size(big-desktop-up) {
     width: calc(100% - 3*30px);
-    min-width: 50px;
   }
 }
  

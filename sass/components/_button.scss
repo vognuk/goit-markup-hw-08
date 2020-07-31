@@ -136,7 +136,10 @@
   }
 
   @include for-size(tablet-landscape-up) {
-
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 118px;
+    margin-left: auto;
   }
 
   @include for-size(big-desktop-up) {

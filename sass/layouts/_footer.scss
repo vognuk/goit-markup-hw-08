@@ -4,36 +4,12 @@
  */
 
 footer {
+  margin-right: auto;
+  margin-left: auto;
+
   background-color: $footer-color;
-
-  @include for-size(phone-only) {
-          // width: 100%;
-    padding-bottom: 60px;
-
-    @include flex(
-      flex,
-      row,
-      wrap,
-      center,
-      center
-    );
-  }
-
-  @include for-size(tablet-portrait-up) {
-
-  }
-
-  @include for-size(tablet-landscape-up) {
-
-  }
-
-  @include for-size(big-desktop-up) {
-    padding-bottom: 60px;
-  }
 }
 
-/* address column */
-    
 .footer-contacts {
   @include for-size(phone-only) {
     @include flex(
@@ -43,17 +19,30 @@ footer {
       center,
       center
     );
-
-    margin-top:  $phone--header-top;
-    margin-bottom:  $phone--header-top; 
+    padding-bottom:  $phone--header-top;
   }
 
   @include for-size(tablet-portrait-up) {
-
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      center
+    );
+    padding-bottom:  $phone--header-top;
   }
 
   @include for-size(tablet-landscape-up) {
+    @include flex(
+      flex,
+      column,
+      wrap,
+      center,
+      flex-start
+    );
 
+    padding-bottom:  $phone--header-top;
   }
 
   @include for-size(big-desktop-up) {
@@ -62,18 +51,38 @@ footer {
       column,
       nowrap,
       left,
-      inherit
+      baseline
     );
   
     width: calc((50% - 45px) / 2);
     margin-right: 70px;
   }
 }
+  
+.social-link {
+  background-color: $footer-social-bgr;
+}
     
-footer .contact-link {
-  @include for-size(phone-only) {
-    line-height: 19px;
+/* --- Subscribe */
+    
+.footer-header {
+  display: block;
+  
+  @include font(
+    Roboto,
+    normal,
+    bold,
+    14px,
+    16px,
+    left,
+    0.03em,
+    $button-text-color,
+    uppercase
+  );
 
+  margin-bottom: 20px;
+
+  @include for-size(phone-only) {
     @include flex(
       flex,
       row,
@@ -84,81 +93,32 @@ footer .contact-link {
   }
 
   @include for-size(tablet-portrait-up) {
-
-  }
-
-  @include for-size(tablet-landscape-up) {
-
-  }
-
-  @include for-size(big-desktop-up) {
-    line-height: 19px;
-  }
-}
-
-.contact-item:not(:last-child) {
-  width: 100%;
-  padding-bottom: 18px;
-}
-
-.address-post {
-  @include font(
-    Roboto, 
-    normal, 
-    normal, 
-    14px, 
-    24px, 
-    left, 
-    0.03em, 
-    $button-text-color, 
-    none
-  );
-}
-  
-.social-link {
-  background-color: $footer-social-bgr;
-}
-    
-/* --- Subscribe */
-    
-.footer-subscribe {
-  @include for-size(phone-only) {
-    margin-bottom: 20px;
-
-    @include font(
-      Roboto,
-      normal,
-      bold,
-      14px,
-      16px,
+    @include flex(
+      flex,
+      row,
+      nowrap,
       center,
-      0.03em,
-      $button-text-color,
-      uppercase
-    );  
-  }
-
-  @include for-size(tablet-portrait-up) {
-
+      center
+    );
   }
 
   @include for-size(tablet-landscape-up) {
-
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      center,
+      center
+    );
   }
 
   @include for-size(big-desktop-up) {
-    margin-bottom: 20px;
-
-    @include font(
-      Roboto,
-      normal,
-      bold,
-      14px,
-      16px,
-      left,
-      0.03em,
-      $button-text-color,
-      uppercase
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      flex-start,
+      center
     );
   }
 }

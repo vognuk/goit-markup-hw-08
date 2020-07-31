@@ -22,6 +22,7 @@
       url('../images/hero-768.jpg');
     background-color: $hero-ways-background;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -33,6 +34,7 @@
       url('../images/hero-1600.jpg');
     background-color: $hero-ways-background;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 
   @include for-size(big-desktop-up) {

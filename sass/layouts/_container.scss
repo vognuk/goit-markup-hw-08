@@ -1,14 +1,17 @@
 .container {
   @include for-size(phone-only) {
     position: relative;
-    width: 100%;
-    margin-right: 30px;
+    // width: 100%;
+    margin-right: -30px;
 
-    // margin-top: $phone--section-padding;
+    margin-top: $phone--header-top;
     // margin-bottom: $phone--section-padding;
   }
   
   @include for-size(tablet-portrait-up) {
+    // position: relative;
+    width: 100%;
+    
 
   }
 
@@ -66,14 +69,21 @@
 }
 
 footer .container {
-
   @include for-size(phone-only) {
     padding-bottom: 0px;
-    margin-right: 15px;
+    width: 100%;
   }
 
   @include for-size(tablet-portrait-up) {
-
+    @include flex(
+      flex,
+      column,
+      wrap,
+      space-between,
+      center
+    );
+    width: 100%;
+    padding-top: $phone--header-top;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -81,13 +91,14 @@ footer .container {
       flex,
       row,
       wrap,
-      space-between,
+      space-around,
       baseline
     );
+    width: 100%;
+    padding-top: $phone--header-top;
   }
 
   @include for-size(big-desktop-up) {
-    padding-bottom: 0px;
     @include flex(
       flex,
       row,
@@ -95,28 +106,38 @@ footer .container {
       center,
       baseline
     );
-
+    width: 100%;
+    padding-top: $phone--header-top;
     padding-bottom: 0px;
   }
 }
 
 .container-box {
-  // width: 100%;
-
   @include for-size(phone-only) {
     @include flex(
       flex,
       row,
       wrap,
-      space-between,
-      stretch
+      center,
+      center
     );
+    width: 100%;
     // margin-right: -30px;
+    margin-top:  $phone--header-top;
     margin-bottom:  $phone--header-top;
   }
 
   @include for-size(tablet-portrait-up) {
-
+    @include flex(
+      flex,
+      row,
+      wrap,
+      center,
+      center
+    );
+    // width: 100%;
+    margin-top:  $phone--header-top;
+    margin-bottom:  $phone--header-top;
   }
 
   @include for-size(tablet-landscape-up) {
@@ -124,9 +145,12 @@ footer .container {
       flex,
       row,
       wrap,
-      space-between,
-      stretch
+      center,
+      center
     );
+    // width: 100%;
+    margin-top:  $phone--header-top;
+    margin-bottom:  $phone--header-top;
   }
 
   @include for-size(big-desktop-up) {
@@ -134,8 +158,9 @@ footer .container {
       flex,
       row,
       nowrap,
-      space-between,
-      stretch
+      center,
+      center
     );
+    // width: 100%;
   }
 }
