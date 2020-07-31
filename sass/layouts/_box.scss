@@ -28,7 +28,8 @@
   }
 
   @include for-size(tablet-landscape-up) {
-    width: calc((100% - 30px * 3) / 2);
+    width: calc((100% - 30px * 2) / 2);
+    height: 251px;
     // width: 100%;
     margin: 15px 15px 15px 15px;
   }
@@ -249,7 +250,7 @@
   }
 
   @include for-size(tablet-landscape-up) {
-    width: calc((100% - 30px * 3) / 2);
+    width: calc((100% - 30px * 2) / 2);
     margin: 15px 15px 15px 15px;
 
     // &:nth-child(4n) {
@@ -334,14 +335,14 @@
   }
 
   @include for-size(tablet-portrait-up) {
-    width: calc((100% - 30px * 3) / 2);
+    width: calc((100% - 30px * 2) / 2);
     max-width: 210px;
     height: 90px;
     margin: 15px 15px 15px 15px;
   }
 
   @include for-size(tablet-landscape-up) {
-    width: calc((100% - 30px * 4) / 3);
+    width: calc((100% - 30px * 3) / 3);
     max-width: 225px;
     height: 90px;
     margin: 15px 15px 15px 15px;

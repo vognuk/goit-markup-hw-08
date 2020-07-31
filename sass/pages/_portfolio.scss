@@ -32,7 +32,13 @@
   }
 
   @include for-size(tablet-landscape-up) {
-
+    @include flex(
+      flex,
+      row,
+      nowrap,
+      center,
+      center
+    );
   }
 
   @include for-size(big-desktop-up) {
@@ -59,7 +65,13 @@
   }
 
   @include for-size(tablet-landscape-up) {
-
+    @include flex(
+      flex,
+      row,
+      wrap,
+      stretch,
+      center
+    );
   }
 
   @include for-size(big-desktop-up) {
@@ -110,7 +122,7 @@
   }
 
   @include for-size(tablet-landscape-up) {
-
+    width: calc((100% - 30px * 2) / 2);
   }
 
   @include for-size(big-desktop-up) {

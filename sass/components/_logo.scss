@@ -1,14 +1,14 @@
 .logo-container {
     @include for-size(phone-only) {
- 
+        margin: 15px 15px 15px 15px;
     }
 
     @include for-size(tablet-portrait-up) {
- 
+        margin: 15px 15px 15px 15px;
     }
 
     @include for-size(tablet-landscape-up) {
-       
+        margin: 15px 15px 15px 15px;
     }
 
     @include for-size(big-desktop-up) {
