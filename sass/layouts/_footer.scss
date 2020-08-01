@@ -11,18 +11,11 @@ footer {
 }
 
 .footer-contacts {
-  @include for-size(phone-only) {
-    @include flex(flex, column, nowrap, center, center);
-    padding-bottom: $phone--header-top;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    @include flex(flex, column, nowrap, center, center);
-    padding-bottom: $phone--header-top;
-  }
-
+  @include flex(flex, column, nowrap, center, center);
+  padding-bottom: $phone--header-top;
+ 
   @include for-size(tablet-landscape-up) {
-    @include flex(flex, column, wrap, center, flex-start);
+    @include flex(flex, column, wrap, center, center);
 
     padding-bottom: $phone--header-top;
   }
@@ -41,8 +34,8 @@ footer {
 
 /* --- Subscribe */
 
-.footer-header {
-  display: block;
+.footer-heading {
+  @include flex(flex, row, nowrap, center, center);
 
   @include font(
     Roboto,
@@ -58,19 +51,7 @@ footer {
 
   margin-bottom: 20px;
 
-  @include for-size(phone-only) {
-    @include flex(flex, row, nowrap, center, center);
-  }
-
-  @include for-size(tablet-portrait-up) {
-    @include flex(flex, row, nowrap, center, center);
-  }
-
-  @include for-size(tablet-landscape-up) {
-    @include flex(flex, row, nowrap, center, center);
-  }
-
   @include for-size(big-desktop-up) {
-    @include flex(flex, row, nowrap, flex-start, center);
+    @include flex(flex, row, nowrap, left, center);
   }
 }

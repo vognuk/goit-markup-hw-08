@@ -26,29 +26,18 @@
   background-color: $button-text-color; 
   border-radius: 4px;
 
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  width: 100%;
+
   @include for-size(phone-only) {
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 450px;
-    width: 100%;
-
-    // overflow-y: scroll;
   }
-
-  @include for-size(tablet-portrait-up) {
-
-  }
-
-  @include for-size(tablet-landscape-up) {
-
-  }
-
+  
   @include for-size(big-desktop-up) {
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-   
     max-width: 528px;
     width: 100%;
   }

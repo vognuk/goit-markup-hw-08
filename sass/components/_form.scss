@@ -182,7 +182,8 @@
 }
 
 .comment-field {
-  width: 448px;
+  // max-width: 448px;
+  width: 100%;
   padding: 12px;
 
   border-color: $form-input-color;
@@ -253,19 +254,8 @@
 }
 
 .footer-email {
-  @include for-size(phone-only) {
-  }
-
-  @include for-size(tablet-portrait-up) {
-    @include flex(flex, column, nowrap, center, center);
-  }
-
-  @include for-size(tablet-landscape-up) {
-    @include flex(flex, column, nowrap, center, center);
-
-    // max-width: 450px;
-  }
-
+  @include flex(flex, column, nowrap, center, center);
+ 
   @include for-size(big-desktop-up) {
     @include flex(flex, row, nowrap, left, flex-start);
   }

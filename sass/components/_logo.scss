@@ -6,6 +6,7 @@
     margin-right: 85px;
 
     @include for-size(tablet-landscape-up) {
+        @include flex(flex, row, nowrap, center, center);
         margin: 0 80px 0 15px;
     }
 

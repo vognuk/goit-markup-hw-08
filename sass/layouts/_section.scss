@@ -57,6 +57,7 @@ footer .container {
 	@include for-size(phone-only) {
 		padding-bottom: 0px;
 		width: 100%;
+		padding-top: $phone--header-top;
 	}
 
 	@include for-size(tablet-portrait-up) {
