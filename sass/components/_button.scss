@@ -79,7 +79,9 @@
   }
 
   @include for-size(tablet-landscape-up) {
-    display: none;
+    &.aria-expanded.true{
+        display: block;
+    }
   }
 
   @include for-size(big-desktop-up) {

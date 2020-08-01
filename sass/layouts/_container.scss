@@ -1,34 +1,25 @@
 .container {
-  @include for-size(phone-only) {
-    position: relative;
-    // width: 100%;
-    margin-right: -30px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
+  @include for-size(phone-only) {
+    margin-right: -30px;
     margin-top: $phone--header-top;
-    // margin-bottom: $phone--section-padding;
   }
   
   @include for-size(tablet-portrait-up) {
-    // position: relative;
-    width: 100%;
-    
 
   }
 
   @include for-size(tablet-landscape-up) {
-    width: 100%;
+
   }
 
   @include for-size(big-desktop-up) {
-    display: block;
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-
     padding-top: $section-padding;
-  
     padding-bottom: $section-padding;
   }
 }

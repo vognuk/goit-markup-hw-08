@@ -152,8 +152,8 @@
     }
 
     @include for-size(tablet-landscape-up) {
-      width: 0px;
-      display: none;
+      // width: 0px;
+      // display: none;
     }
 
     @include for-size(big-desktop-up) {

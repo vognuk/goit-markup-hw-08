@@ -9,7 +9,7 @@
     top: 60px;
     left: 0;
     width: 100%;
-    max-width: 480px;
+    // max-width: 480px;
 
     display: none;
 
@@ -45,11 +45,34 @@
   }
 
   @include for-size(tablet-landscape-up) {
- 
+    &.is-open {
+
+    }
+  
   }
 
   @include for-size(big-desktop-up) {
 
+  }
+}
+
+.menu-desktop {
+  @include for-size(phone-only) {
+      
+  }
+
+  @include for-size(tablet-portrait-up) {
+    
+  }
+
+  @include for-size(tablet-landscape-up) {
+    width: 100%;
+    height: 60px;
+  }
+
+  @include for-size(big-desktop-up) {
+    width: 100%;
+    height: 60px;
   }
 }
 

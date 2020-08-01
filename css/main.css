@@ -79,7 +79,6 @@ img {
     top: 60px;
     left: 0;
     width: 100%;
-    max-width: 480px;
     display: none;
     background-color: #ffffff;
     -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.04);
@@ -106,6 +105,20 @@ img {
   }
   .header-navigation.is-open {
     display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-desktop {
+    width: 100%;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-desktop {
+    width: 100%;
+    height: 60px;
   }
 }
 
