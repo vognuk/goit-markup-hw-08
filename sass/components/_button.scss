@@ -46,14 +46,6 @@
 
   border: none;
 
-  & svg {
-    width: 40px;
-    height: 40px;
-    
-    fill: $title-color;
-    background-color: $button-text-color;
-  }
-
   &:hover {
     @extend %link-animation-placeholder;
   }
@@ -70,24 +62,21 @@
     display: block;
   }
 
-  @include for-size(phone-only) {
-      
-  }
-
-  @include for-size(tablet-portrait-up) {
-    
-  }
-
   @include for-size(tablet-landscape-up) {
-    &.aria-expanded.true{
-        display: block;
-    }
+    display: none;
   }
 
   @include for-size(big-desktop-up) {
     display: none;
   }
 
+  & svg {
+    width: 40px;
+    height: 40px;
+    
+    fill: $title-color;
+    background-color: $button-text-color;
+  }
 }
 
 .button-pull-down-close {
@@ -108,6 +97,10 @@
 
   background-color:  transparent;
 
+  &:hover {
+    @extend %link-animation-placeholder;
+  }
+
   & svg {
     width: 40px;
     height: 40px;
@@ -115,34 +108,13 @@
     fill: $title-color;
     // background-color: $button-text-color;
   }
-
-  &:hover {
-    @extend %link-animation-placeholder;
-  }
 }
 
 .hero .button-style {
-  
-  @include for-size(phone-only) {
-    margin-top: 30px;
-    margin-right: auto;
-    margin-bottom: 118px;
-    margin-left: auto;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    margin-top: 30px;
-    margin-right: auto;
-    margin-bottom: 118px;
-    margin-left: auto;
-  }
-
-  @include for-size(tablet-landscape-up) {
-    margin-top: 30px;
-    margin-right: auto;
-    margin-bottom: 118px;
-    margin-left: auto;
-  }
+  margin-top: 30px;
+  margin-right: auto;
+  margin-bottom: 118px;
+  margin-left: auto;
 
   @include for-size(big-desktop-up) {
     margin-bottom: 224px;

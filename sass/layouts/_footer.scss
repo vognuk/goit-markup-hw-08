@@ -12,62 +12,38 @@ footer {
 
 .footer-contacts {
   @include for-size(phone-only) {
-    @include flex(
-      flex,
-      column,
-      nowrap,
-      center,
-      center
-    );
-    padding-bottom:  $phone--header-top;
+    @include flex(flex, column, nowrap, center, center);
+    padding-bottom: $phone--header-top;
   }
 
   @include for-size(tablet-portrait-up) {
-    @include flex(
-      flex,
-      column,
-      nowrap,
-      center,
-      center
-    );
-    padding-bottom:  $phone--header-top;
+    @include flex(flex, column, nowrap, center, center);
+    padding-bottom: $phone--header-top;
   }
 
   @include for-size(tablet-landscape-up) {
-    @include flex(
-      flex,
-      column,
-      wrap,
-      center,
-      flex-start
-    );
+    @include flex(flex, column, wrap, center, flex-start);
 
-    padding-bottom:  $phone--header-top;
+    padding-bottom: $phone--header-top;
   }
 
   @include for-size(big-desktop-up) {
-    @include flex(
-      flex,
-      column,
-      nowrap,
-      left,
-      baseline
-    );
-  
+    @include flex(flex, column, nowrap, left, baseline);
+
     width: calc((50% - 45px) / 2);
     margin-right: 70px;
   }
 }
-  
+
 .social-link {
   background-color: $footer-social-bgr;
 }
-    
+
 /* --- Subscribe */
-    
+
 .footer-header {
   display: block;
-  
+
   @include font(
     Roboto,
     normal,
@@ -83,42 +59,18 @@ footer {
   margin-bottom: 20px;
 
   @include for-size(phone-only) {
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      center,
-      center
-    );
+    @include flex(flex, row, nowrap, center, center);
   }
 
   @include for-size(tablet-portrait-up) {
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      center,
-      center
-    );
+    @include flex(flex, row, nowrap, center, center);
   }
 
   @include for-size(tablet-landscape-up) {
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      center,
-      center
-    );
+    @include flex(flex, row, nowrap, center, center);
   }
 
   @include for-size(big-desktop-up) {
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      flex-start,
-      center
-    );
+    @include flex(flex, row, nowrap, flex-start, center);
   }
 }

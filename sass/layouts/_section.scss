@@ -1,0 +1,80 @@
+.section {
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	@include for-size(big-desktop-up) {
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
+}
+
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	// padding-left: 15px;
+	// padding-right: 15px;
+
+	@include for-size(tablet-portrait-up) {
+		width: 480px;
+	}
+
+	@include for-size(tablet-landscape-up) {
+		width: 768px;
+	}
+
+	@include for-size(big-desktop-up) {
+		width: 1200px;
+	}
+}
+
+.container-heading {
+	display: block;
+	margin-top: 0;
+	margin-bottom: 30px;
+	@include font(Roboto, normal, bold, 36px, 42px, center, 0.03em, $title-color, none);
+
+	@include for-size(big-desktop-up) {
+		margin-bottom: 50px;
+	}
+}
+
+.container-box {
+	@include flex(flex, row, wrap);
+	width: 100%;
+}
+
+.principles {
+	@include for-size(big-desktop-up) {
+		padding-top: 0px;
+	}
+}
+
+footer .container {
+	padding-right: 15px;
+	padding-left: 15px;
+
+	@include for-size(phone-only) {
+		padding-bottom: 0px;
+		width: 100%;
+	}
+
+	@include for-size(tablet-portrait-up) {
+		@include flex(flex, column, wrap, space-between, center);
+		width: 100%;
+		padding-top: $phone--header-top;
+	}
+
+	@include for-size(tablet-landscape-up) {
+		@include flex(flex, row, wrap, space-around, baseline);
+		width: 100%;
+		padding-top: $phone--header-top;
+	}
+
+	@include for-size(big-desktop-up) {
+		@include flex(flex, row, nowrap, center, baseline);
+		width: 1200px;
+		padding-top: $phone--header-top;
+		padding-bottom: 0px;
+	}
+}

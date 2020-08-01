@@ -1,17 +1,13 @@
-
 /* Main menu */
 
 .header-navigation {
-  @include for-size(phone-only) {
     position: absolute;
     z-index: 10;
-    transform: translate(0, 1px);
     top: 60px;
     left: 0;
-    width: 100%;
-    // max-width: 480px;
 
     display: none;
+    width: 100%;
 
     &.is-open {
       display: block;
@@ -21,127 +17,57 @@
 
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.08),
     0px 1px 1px rgba(0, 0, 0, 0.04);
-  }
-
-  @include for-size(tablet-portrait-up) {
-    position: absolute;
-    z-index: 10;
-    transform: translate(0, 1px);
-    top: 60px;
-    left: 0;
-    width: 100%;
-    // max-width: 480px;
-
-    display: none;
-
-    &.is-open {
-      display: block;
-    }
-
-    background-color: $button-text-color;
-
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.08),
-    0px 1px 1px rgba(0, 0, 0, 0.04);
-  }
 
   @include for-size(tablet-landscape-up) {
-    &.is-open {
+    position: static;
+    z-index: none;
+    top: 0;
 
-    }
-  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+
+    box-shadow: none;
   }
 
   @include for-size(big-desktop-up) {
+    height: 78px;
 
-  }
-}
-
-.menu-desktop {
-  @include for-size(phone-only) {
-      
-  }
-
-  @include for-size(tablet-portrait-up) {
-    
-  }
-
-  @include for-size(tablet-landscape-up) {
-    width: 100%;
-    height: 60px;
-  }
-
-  @include for-size(big-desktop-up) {
-    width: 100%;
-    height: 60px;
+    box-shadow: none;
   }
 }
 
 .main-menu-link {
-  outline: none;
+  @include flex(
+    flex,
+    row,
+    nowrap,
+    center
+   );
+ 
+   @include font(
+     Roboto,
+     normal,
+     500,
+     18px,
+     21px,
+     center,
+     0.02em,
+     $title-color,
+     none
+   );
 
   @extend %link-animation-placeholder;
-
-  @include for-size(phone-only) {
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      center,
-      center
-     );
-   
-     @include font(
-       Roboto,
-       normal,
-       500,
-       18px,
-       21px,
-       center,
-       0.02em,
-       $title-color,
-       none
-     );
-   
-  }
-
-  @include for-size(tablet-portrait-up) {
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      center,
-      center
-    );
-   
-    @include font(
-      Roboto,
-      normal,
-      500,
-      18px,
-      21px,
-      center,
-      0.02em,
-      $title-color,
-      none
-    );
-  }
+  outline: none;
 
   @include for-size(tablet-landscape-up) {
-       
-  }
-
-  @include for-size(big-desktop-up) {
-    position: relative;
-
-    display: block;
-  
     @include font(
       Roboto,
       normal,
       500,
       14px,
       80px,
-      // 16px,
       center,
       0.02em,
       $title-color,
@@ -149,34 +75,50 @@
     );
   }
 
+  @include for-size(big-desktop-up) {
+    @include font(
+      Roboto,
+      normal,
+      500,
+      14px,
+      80px,
+      center,
+      0.02em,
+      $title-color,
+      none
+    );
+  }
 }
 
 .header-pages {
-  @include for-size(phone-only) {
-    margin-top: 60px;
-    margin-bottom: 60px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 
-    @include list-margin (
-      40px
-    );
-  }
-
-  @include for-size(tablet-portrait-up) {
-    margin-top: 60px;
-    margin-bottom: 60px;
-
-    @include list-margin (
-      40px
-    );
-  }
+  @include list-margin (
+    40px
+  );
 
   @include for-size(tablet-landscape-up) {
+    display: flex;
+    margin-top: 0px;
+    margin-right: 85px;
+    margin-bottom: 0px;
 
+    & > li:not(:last-child) {
+      display: block;
+      margin-right: 50px;
+    }  
+
+    @include list-margin (
+      0px
+    );
   }  
 
   @include for-size(big-desktop-up) {
     display: flex;
+    margin-top: 0px;
     margin-right: 305px;
+    margin-bottom: 0px;
 
     & > li:not(:last-child) {
       display: block;
@@ -186,155 +128,125 @@
 }
 
 .header-address {
-  @include for-size(phone-only) {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 
-    @include list-margin (
-      16px
-    );
-  }
-
-  @include for-size(tablet-portrait-up) {
-    margin-bottom: 60px;
-
-    @include list-margin (
-      16px
-    );
-  }
+  @include list-margin (
+    16px
+  );
 
   @include for-size(tablet-landscape-up) {
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      center
+    );
 
+    margin-bottom: 0px;
+
+    @include list-margin (
+      10px
+    );
   }
 
   @include for-size(big-desktop-up) {
+    @include flex(
+      flex,
+      row,
+      nowrap
+    );
 
+    & > li:not(:last-child) {
+      margin-right: 30px;
+    }  
   }
 }
 
 .header-icon {
-  @include for-size(phone-only) {
-    height: 21px;
-    fill: $subtitle-color;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    height: 21px;
-    fill: $subtitle-color;
-  }
+  height: 21px;
+  fill: $subtitle-color;
 
   @include for-size(tablet-landscape-up) {
-
+    display: block;
+    width: 15px;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
-
+  
   @include for-size(big-desktop-up) {
     display: block;
     width: 15px;
     margin-right: 10px;
     margin-top: auto;
     margin-bottom: auto;
-  
-    fill: $subtitle-color;
   }
 }
 
-/* contacts animation */
-
-
-
-// .header-contacts {
-//   @include for-size(phone-only) {
-     
-//   }
-
-//   @include for-size(tablet-portrait-up) {
-//     display: block;
-
-//   }
-
-//   @include for-size(tablet-landscape-up) {
-//     display: block;
-     
-//   }
-
-//   @include for-size(big-desktop-up) {
-//     display: flex;
-
-//     & > li:not(:last-child) {
-//       margin-right: 30px;
-//     }  
-//   }
-// }
-  
 .header-number {
-  display: block;
-
   padding: 0px;
   border: 0px;
 
   margin-top: auto;
   margin-bottom: auto;
 
+  @include font(
+    Roboto,
+    normal,
+    medium,
+    12px,
+    14px,
+    center,
+    0.02em,
+    $subtitle-color,
+    none
+  );
+
   white-space: nowrap;
 
-  @include for-size(phone-only) {
-    @include font(
-      Roboto,
-      normal,
-      medium,
-      18px,
-      21px,
-      center,
-      0.02em,
-      $subtitle-color,
-      none
-    );
-    // padding-right: 10px;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    @include font(
-      Roboto,
-      normal,
-      medium,
-      18px,
-      21px,
-      center,
-      0.02em,
-      $subtitle-color,
-      none
-    );
-    // padding-right: 10px;
-  }
-
-  @include for-size(tablet-landscape-up) {
-
-  }
-
   @include for-size(big-desktop-up) {
+    @include flex(
+      flex,
+      row,
+      nowrap
+    );
+
     @include font(
       Roboto,
       normal,
       medium,
       14px,
-      16px,
+      80px,
       center,
       0.02em,
       $subtitle-color,
       none
     );
-
-    // margin-right: 10px;
   }
 }
 
 .current-page-studio {
   @include current-page (60px, 292px);
+
+  @include for-size(tablet-landscape-up) {
+    @include current-page (48px, 0);
+  }
+
+  @include for-size(big-desktop-up) {
+    @include current-page (48px, 0);
+  }
 }
 
 .current-page-portfolio {
   @include current-page (100px, 231px);
-}
 
-.portfolio-menu {
-  margin-left: 15px;
+  @include for-size(tablet-landscape-up) {
+    @include current-page (75px, 0);
+  }
+
+  @include for-size(big-desktop-up) {
+    @include current-page (75px, 0);
+  }
+
 }

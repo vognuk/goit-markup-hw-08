@@ -20,24 +20,24 @@
 
   fill: $logo-color-2-2;
 }
-  
+
 .form-header {
   padding-top: 25px; /* 40-15 */
   padding-bottom: 12px;
 
   @include font(
-    Roboto, 
-    normal, 
-    bold, 
-    20px, 
-    23px, 
-    center, 
-    0.03em, 
-    $title-color, 
+    Roboto,
+    normal,
+    bold,
+    20px,
+    23px,
+    center,
+    0.03em,
+    $title-color,
     none
   );
 }
-  
+
 .form-input {
   width: 100%;
   height: 40px;
@@ -48,28 +48,27 @@
   border-width: 1px;
   border-radius: 4px;
 }
-   
+
 .form-label {
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   padding-left: 42px;
-  
+
   @include font(
-    Roboto, 
-    normal, 
-    normal, 
-    14px, 
-    16px, 
-    left, 
-    0.01em, 
-    $subtitle-color, 
+    Roboto,
+    normal,
+    normal,
+    14px,
+    16px,
+    left,
+    0.01em,
+    $subtitle-color,
     uppercase
   );
-
 }
-  
+
 .form-field {
   position: relative;
   left: 0;
@@ -98,23 +97,23 @@
   &:focus + .form-label,
   &:not(:placeholder-shown) + .form-label {
     transform: translateX(-25px) translateY(-40px);
-    transition: $main-transition; 
+    transition: $main-transition;
   }
-}  
-  
+}
+
 .form-customer-icon {
   position: absolute;
   left: 19px;
   bottom: 50%;
   transform: translateY(50%);
 }
-  
+
 .license-agreement,
 .checkbox-label {
   display: inline-flex;
   align-items: center;
 }
-  
+
 .hero-form-checkbox {
   position: absolute;
 
@@ -123,13 +122,13 @@
   appearance: none;
 }
 
-.hero-form-checkbox  ~ .hero-custom-checkbox:before {
+.hero-form-checkbox ~ .hero-custom-checkbox:before {
   content: '';
 
   display: inline-flex;
   width: 16px;
   height: 16px;
-  
+
   border: 2px solid $title-color;
   border-radius: 2px;
   margin-right: 8px;
@@ -140,19 +139,19 @@
 
 .hero-custom-checkbox {
   @include font(
-    Roboto, 
-    normal, 
-    normal, 
-    14px, 
-    24px, 
-    center, 
-    0.03em, 
-    $subtitle-color, 
+    Roboto,
+    normal,
+    normal,
+    14px,
+    24px,
+    center,
+    0.03em,
+    $subtitle-color,
     none
   );
 }
-  
-.hero-form-checkbox:checked ~ .hero-custom-checkbox:before { 
+
+.hero-form-checkbox:checked ~ .hero-custom-checkbox:before {
   background-color: $header-blue;
   border-color: transparent;
   background-image: url('../images/custom-checked-box.svg');
@@ -160,7 +159,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-  
+
 .hero-comment {
   margin-right: 40px;
   margin-left: 40px;
@@ -170,18 +169,18 @@
   // width: 100%;
 
   @include font(
-    Roboto, 
-    normal, 
-    normal, 
-    14px, 
-    16px, 
-    center, 
-    0.01em, 
-    $subtitle-color, 
+    Roboto,
+    normal,
+    normal,
+    14px,
+    16px,
+    center,
+    0.01em,
+    $subtitle-color,
     none
   );
 }
-  
+
 .comment-field {
   width: 448px;
   padding: 12px;
@@ -229,96 +228,53 @@
 
 .footer-form {
   @include for-size(phone-only) {
-    @include flex(
-      flex,
-      column,
-      nowrap,
-      center,
-      normal
-    );
+    @include flex(flex, column, nowrap, center, normal);
     width: 100%;
-    padding-bottom:  $phone--header-top;
+    padding-bottom: $phone--header-top;
   }
 
   @include for-size(tablet-portrait-up) {
-    @include flex(
-      flex,
-      column,
-      nowrap,
-      center,
-      normal
-    );
+    @include flex(flex, column, nowrap, center, normal);
 
     width: 100%;
-    padding-bottom:  $phone--header-top;
+    padding-bottom: $phone--header-top;
   }
 
   @include for-size(tablet-landscape-up) {
-    @include flex(
-      flex,
-      column,
-      nowrap,
-      center,
-      normal
-    );
+    @include flex(flex, column, nowrap, center, normal);
     width: 100%;
-    padding-bottom:  $phone--header-top;
+    padding-bottom: $phone--header-top;
   }
 
   @include for-size(big-desktop-up) {
-    @include flex(
-      flex,
-      column,
-      nowrap,
-      left,
-      normal
-    );
+    @include flex(flex, column, nowrap, left, normal);
     width: calc(50% - 15px);
   }
 }
-    
+
 .footer-email {
   @include for-size(phone-only) {
-
   }
 
   @include for-size(tablet-portrait-up) {
-    @include flex(
-      flex,
-      column,
-      nowrap,
-      center,
-      center
-    );
+    @include flex(flex, column, nowrap, center, center);
   }
 
   @include for-size(tablet-landscape-up) {
-    @include flex(
-      flex,
-      column,
-      nowrap,
-      center,
-      center
-    );
+    @include flex(flex, column, nowrap, center, center);
 
     // max-width: 450px;
   }
 
   @include for-size(big-desktop-up) {
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      left,
-      flex-start
-    );
+    @include flex(flex, row, nowrap, left, flex-start);
   }
 }
-    
+
 .footer-input {
   height: 50px;
   padding-left: 12px;
- 
+
   @include font(
     Roboto,
     normal,
@@ -339,28 +295,14 @@
   border-radius: 4px;
   background-color: $footer-color;
   border-radius: 4px;
-
-  @include for-size(phone-only) {
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-bottom: 20px;
-
-  }
-
-  @include for-size(tablet-portrait-up) {
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
 
   @include for-size(tablet-landscape-up) {
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 20px;
   }
 
   @include for-size(big-desktop-up) {
-    width: calc(100% - 3*30px);
+    width: calc(100% - 3 * 30px);
   }
 }
- 
