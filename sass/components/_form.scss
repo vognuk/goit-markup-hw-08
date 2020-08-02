@@ -25,17 +25,7 @@
   padding-top: 25px; /* 40-15 */
   padding-bottom: 12px;
 
-  @include font(
-    Roboto,
-    normal,
-    bold,
-    20px,
-    23px,
-    center,
-    0.03em,
-    $title-color,
-    none
-  );
+  @include font(Roboto, normal, bold, 20px, 23px, center, 0.03em, $title-color, none);
 }
 
 .form-input {
@@ -56,17 +46,7 @@
   transform: translateY(-50%);
   padding-left: 42px;
 
-  @include font(
-    Roboto,
-    normal,
-    normal,
-    14px,
-    16px,
-    left,
-    0.01em,
-    $subtitle-color,
-    uppercase
-  );
+  @include font(Roboto, normal, normal, 14px, 16px, left, 0.01em, $subtitle-color, uppercase);
 }
 
 .form-field {
@@ -138,17 +118,7 @@
 }
 
 .hero-custom-checkbox {
-  @include font(
-    Roboto,
-    normal,
-    normal,
-    14px,
-    24px,
-    center,
-    0.03em,
-    $subtitle-color,
-    none
-  );
+  @include font(Roboto, normal, normal, 14px, 24px, center, 0.03em, $subtitle-color, none);
 }
 
 .hero-form-checkbox:checked ~ .hero-custom-checkbox:before {
@@ -166,17 +136,7 @@
   padding-top: 14px;
   padding-bottom: 20px;
 
-  @include font(
-    Roboto,
-    normal,
-    normal,
-    14px,
-    16px,
-    center,
-    0.01em,
-    $subtitle-color,
-    none
-  );
+  @include font(Roboto, normal, normal, 14px, 16px, center, 0.01em, $subtitle-color,  none);
 }
 
 .comment-field {
@@ -262,17 +222,7 @@
   height: 50px;
   padding-left: 12px;
 
-  @include font(
-    Roboto,
-    normal,
-    normal,
-    16px,
-    30px,
-    left,
-    0.03em,
-    $contact-color,
-    none
-  );
+  @include font(Roboto, normal, normal, 16px, 30px, left, 0.03em, $contact-color, none);
 
   width: 100%;
   min-width: 50px;

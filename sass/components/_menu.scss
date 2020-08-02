@@ -38,54 +38,19 @@
 }
 
 .main-menu-link {
-  @include flex(
-    flex,
-    row,
-    nowrap,
-    center
-   );
+  @include flex(flex, row, nowrap, center);
  
-   @include font(
-     Roboto,
-     normal,
-     500,
-     18px,
-     21px,
-     center,
-     0.02em,
-     $title-color,
-     none
-   );
+   @include font(Roboto, normal, 500, 18px, 21px, center, 0.02em, $title-color, none);
 
   @extend %link-animation-placeholder;
   outline: none;
 
   @include for-size(tablet-landscape-up) {
-    @include font(
-      Roboto,
-      normal,
-      500,
-      14px,
-      80px,
-      center,
-      0.02em,
-      $title-color,
-      none
-    );
+    @include font(Roboto, normal, 500, 14px, 80px, center, 0.02em, $title-color, none);
   }
 
   @include for-size(big-desktop-up) {
-    @include font(
-      Roboto,
-      normal,
-      500,
-      14px,
-      80px,
-      center,
-      0.02em,
-      $title-color,
-      none
-    );
+    @include font(Roboto, normal, 500, 14px, 80px, center, 0.02em, $title-color, none);
   }
 }
 
@@ -154,38 +119,14 @@
   margin-top: auto;
   margin-bottom: auto;
 
-  @include font(
-    Roboto,
-    normal,
-    500,
-    12px,
-    14px,
-    center,
-    0.02em,
-    $subtitle-color,
-    none
-  );
+  @include font(Roboto, normal, 500, 12px, 14px, center, 0.02em, $subtitle-color, none);
 
   white-space: nowrap;
 
   @include for-size(big-desktop-up) {
-    @include flex(
-      flex,
-      row,
-      nowrap
-    );
+    @include flex(flex, row, nowrap);
 
-    @include font(
-      Roboto,
-      normal,
-      500,
-      14px,
-      80px,
-      center,
-      0.02em,
-      $subtitle-color,
-      none
-    );
+    @include font(Roboto, normal, 500, 14px, 80px, center, 0.02em, $subtitle-color, none);
   }
 }
 

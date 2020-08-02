@@ -25,85 +25,25 @@
 }
   
 .logo-1-2 {
-    @include font(
-        Raleway, 
-        normal, 
-        bold, 
-        24px, 
-        28px, 
-        center, 
-        0.03em, 
-        $header-blue, 
-        none
-    );
+    @include font(Raleway, normal, bold, 24px, 28px, center, 0.03em, $header-blue, none);
      
     @include for-size(big-desktop-up) {
-        @include font(
-            Raleway, 
-            normal, 
-            bold, 
-            26px, 
-            31px, 
-            center, 
-            0.03em, 
-            $header-blue, 
-            none
-        );
+        @include font(Raleway, normal, bold, 26px, 31px, center, 0.03em, $header-blue, none);
     }
 }
 
 .logo-2-2 {
-    @include font(
-        Raleway, 
-        normal, 
-        bold, 
-        24px, 
-        28px, 
-        center, 
-        0.03em, 
-        $logo-color-2-2, 
-        none
-    );
+    @include font(Raleway, normal, bold, 24px, 28px, center, 0.03em, $logo-color-2-2, none);
 
     @include for-size(big-desktop-up) {
-        @include font(
-            Raleway, 
-            normal, 
-            bold, 
-            26px, 
-            31px, 
-            center, 
-            0.03em, 
-            $logo-color-2-2, 
-            none
-        );
+        @include font(Raleway, normal, bold, 26px, 31px, center, 0.03em, $logo-color-2-2, none );
     }
 }
 
 .logo-2-3 {
-    @include font(
-        Raleway, 
-        normal, 
-        bold, 
-        24px, 
-        28px, 
-        center, 
-        0.03em, 
-        $button-text-color, 
-        none
-    );
+    @include font(Raleway, normal, bold, 24px, 28px, center, 0.03em, $button-text-color, none);
 
     @include for-size(big-desktop-up) {
-        @include font(
-            Raleway, 
-            normal, 
-            bold, 
-            26px, 
-            31px, 
-            center, 
-            0.03em, 
-            $button-text-color, 
-            none
-        );
+        @include font(Raleway, normal, bold, 26px, 31px, center, 0.03em, $button-text-color, none);
     }
 }

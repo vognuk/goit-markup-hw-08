@@ -11,32 +11,14 @@
 .menu-list {
   margin-top: 60px;
   margin-bottom: 40px;  
-    @include flex(
-      flex,
-      row,
-      wrap,
-      left,
-      flex-start
-    );
+    @include flex(flex, row, wrap, left, flex-start);
 
   @include for-size(tablet-landscape-up) {
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      center,
-      center
-    );
+    @include flex(flex, row, nowrap, center, center);
   }
 
   @include for-size(big-desktop-up) {
-    @include flex(
-      flex,
-      row,
-      nowrap,
-      center,
-      flex-start
-    );
+    @include flex(flex, row, nowrap, center, flex-start);
     margin-bottom: 35px;
   }
 }
@@ -67,23 +49,11 @@
   }
 
   @include for-size(tablet-landscape-up) {
-    @include flex(
-      flex,
-      row,
-      wrap,
-      stretch,
-      center
-    );
+    @include flex(flex, row, wrap, stretch, center);
   }
 
   @include for-size(big-desktop-up) {
-    @include flex(
-      flex,
-      row,
-      wrap,
-      center,
-      flex-start
-    );
+    @include flex(flex, row, wrap, center, flex-start);
   }
 }
 
@@ -150,17 +120,7 @@
   padding-left: 24px;
   top: 0;
 
-  @include font(
-    Roboto,
-    normal,
-    normal,
-    18px,
-    28px,
-    left,
-    0.03em,
-    $button-text-color,
-    none
-  );
+  @include font(Roboto, normal, normal, 18px, 28px, left, 0.03em, $button-text-color, none);
 
   background-color: $jumping-text-bgr;
 }
@@ -171,33 +131,13 @@
   margin-bottom: 4px;
   margin-left: 24px;
 
-  @include font(
-    Roboto,
-    normal,
-    bold,
-    18px,
-    36px,
-    left,
-    0.06em,
-    $title-color,
-    none
-  );
+  @include font(Roboto, normal, bold, 18px, 36px, left, 0.06em, $title-color, none);
 }
   
 .card-subtitle {
   display: block;
 
-  @include font(
-    Roboto,
-    normal,
-    normal,
-    16px,
-    30px,
-    left,
-    0.03em,
-    $subtitle-color,
-    none
-  );
+  @include font(Roboto, normal, normal, 16px, 30px, left, 0.03em, $subtitle-color, none);
 
   margin-left: 24px;
   margin-bottom: 20px;

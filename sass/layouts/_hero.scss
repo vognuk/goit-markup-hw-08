@@ -60,17 +60,7 @@
   }
   
 .hero-title {
-    @include font(
-      Roboto, 
-      normal, 
-      900, 
-      26px, 
-      42px, 
-      center, 
-      0.06em, 
-      $button-text-color, 
-      uppercase
-    );
+    @include font(Roboto, normal, 900, 26px, 42px, center, 0.06em, $button-text-color, uppercase);
 
   @include for-size(big-desktop-up) {
     margin-bottom: 30px;
@@ -78,17 +68,7 @@
     margin-left: auto;
     margin-right: auto;
   
-    @include font(
-      Roboto, 
-      normal, 
-      900, 
-      44px, 
-      60px, 
-      center, 
-      0.06em, 
-      $button-text-color, 
-      uppercase
-    );
+    @include font(Roboto, normal, 900, 44px, 60px, center, 0.06em, $button-text-color, uppercase);
   } 
 }
 
