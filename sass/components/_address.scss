@@ -1,3 +1,39 @@
+.header-address {
+  margin-bottom: 60px;
+
+  @include list-margin (
+    16px
+  );
+
+  @include for-size(tablet-landscape-up) {
+    @include flex(
+      flex,
+      column,
+      nowrap,
+      center,
+      center
+    );
+
+    margin-bottom: 0px;
+
+    @include list-margin (
+      10px
+    );
+  }
+
+  @include for-size(big-desktop-up) {
+    @include flex(
+      flex,
+      row,
+      nowrap
+    );
+
+    & > li:not(:last-child) {
+      margin-right: 30px;
+    }  
+  }
+}
+
 .address-post {
   @include font(
     Roboto, 
