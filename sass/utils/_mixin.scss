@@ -18,7 +18,7 @@
 	align-items: $align-items;
 }
 
-// Responsive markup
+// @media for 3+ brakepoints
 
 @mixin for-size($range) {
 	$phone-upper-boundary: 480px;
@@ -44,11 +44,15 @@
 	}
 }
 
+// List bottoms without last 
+
 @mixin list-margin($margin-bottom) {
 	& li:not(:last-child) {
 		margin-bottom: $margin-bottom;
 	}
 }
+
+// Header underline
 
 @mixin current-page($width, $bottom) {
 	color: $header-blue;

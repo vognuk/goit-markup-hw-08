@@ -194,7 +194,7 @@
   @include font(
     Roboto,
     normal,
-    medium,
+    500,
     12px,
     14px,
     center,
@@ -248,5 +248,4 @@
   @include for-size(big-desktop-up) {
     @include current-page (75px, 0);
   }
-
 }

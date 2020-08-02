@@ -11,8 +11,6 @@
     }
 
     @include for-size(big-desktop-up) {
-
-        // width: 154px;
         margin: 0 85px 0 15px;
     }
 }
@@ -20,13 +18,8 @@
 .logo-link {
     display: block;
     width: 141px;
-    @include for-size(tablet-landscape-up) {
-        
     
-    }
-
     @include for-size(big-desktop-up) {
-        // display: block;
         width: 155px;
     }
 }

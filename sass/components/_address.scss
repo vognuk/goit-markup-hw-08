@@ -41,9 +41,6 @@
       $subtitle-color,
       none
     );
-    
-    // line-height: 80px;
-  
   }
 
   @include for-size(tablet-portrait-up) {
@@ -60,12 +57,6 @@
       $subtitle-color,
       none
     );
-    
-    // line-height: 80px;
-  }
-
-  @include for-size(tablet-landscape-up) {
-
   }
 
   @include for-size(big-desktop-up) {
@@ -82,8 +73,6 @@
       $subtitle-color,
       none
     );
-    
-    // line-height: 80px;
   }
 }
 

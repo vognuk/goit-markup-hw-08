@@ -16,7 +16,12 @@
 .modal {
   position: absolute;
   z-index: 20;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  max-width: 450px;
+  width: 100%;
   padding-top: 0px;
   padding-bottom: 0px;
 
@@ -25,12 +30,6 @@
   
   background-color: $button-text-color; 
   border-radius: 4px;
-
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 450px;
-  width: 100%;
 
   @include for-size(phone-only) {
     top: 40%;

@@ -126,14 +126,14 @@
   content: '';
 
   display: inline-flex;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
+  margin-right: 8px;
 
   border: 2px solid $title-color;
   border-radius: 2px;
-  margin-right: 8px;
-  flex-shrink: 0;
-
+ 
   transition: $main-transition;
 }
 
@@ -165,8 +165,6 @@
   margin-left: 40px;
   padding-top: 14px;
   padding-bottom: 20px;
-  // max-width: 370px;
-  // width: 100%;
 
   @include font(
     Roboto,
@@ -182,7 +180,6 @@
 }
 
 .comment-field {
-  // max-width: 448px;
   width: 100%;
   padding: 12px;
 
